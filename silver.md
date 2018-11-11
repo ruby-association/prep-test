@@ -743,7 +743,7 @@ h = {"a"=>2, "b"=>4, "c"=>6, "d"=>8, "e"=>10}
 
 **A28. (b)**
 
-`has_key?`, `key?`, `key?`, `member?` are all aliases for a single method which returns `true` if the given key is present in the hash, and returns `false` otherwise.
+`has_key?`, `include?`, `key?`, `member?` are all aliases for a single method which returns `true` if the given key is present in the hash, and returns `false` otherwise.
 
 The `contain?` method is not defined by `Hash`.
 
