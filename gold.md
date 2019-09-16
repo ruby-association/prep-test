@@ -2007,7 +2007,7 @@ The `>>` operator generates a new `Date` object that is *n months* later than th
 In cases where the exact day of month cannot be matched (i.e. a month with 31 days vs. 30 days, or leap year vs. non-leap year), the `<<` and `>>` operators will return a date corresponding to the last valid date in that month.
 
 ```
-puts(Date.new(2016,2,29) << 12) #=> 2015-12-28
+puts(Date.new(2016,2,29) << 12) #=> 2015-02-28
 puts(Date.new(2016,12,31) << 1) #=> 2016-11-30
 puts(Date.new(2016,12,31) << 2) #=> 2016-10-31
 ```
