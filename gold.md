@@ -595,9 +595,9 @@ p copy
 
 **A15:** (B)
 
-Both `Object#dup` and `Object#clone` produce shallow copies. In the case of an `Array`, this means that the array itself is copied, but the objects within the array are not. So in this specific exaple `original[0]` and `copy[0]` both still reference the same object.
+Both `Object#dup` and `Object#clone` produce shallow copies. In the case of an `Array`, this means that the array itself is copied, but the objects within the array are not. So in this specific example `original[0]` and `copy[0]` both still reference the same object.
 
-One convention that can be used for creating deep copies in Ruby is to serialize and then deserialize an object, using the `Marsal` core class, e.g. `copy = Marsal.load(Marhal.dump(original))`.
+One convention that can be used for creating deep copies in Ruby is to serialize and then deserialize an object, using the `Marshal` core class, e.g. `copy = Marshal.load(Marshal.dump(original))`.
 
 -----------------------------------------------------------------
 
@@ -1225,7 +1225,7 @@ Exception rescue
 
 A bare `rescue` statement matches `StandardError` and its descendents. As such, it will not match any exceptions which inherit from the `Exception` base class directly.
 
-Within a single `begin/end` block, only the the first matched `rescue` clause will be run, even if there are multiple clauses that match. 
+Within a single `begin/end` block, only the first matched `rescue` clause will be run, even if there are multiple clauses that match. 
 
 -----------------------------------------------------------------
 
@@ -1400,7 +1400,7 @@ hi
 
 **A35:** (C)
 
-The `ensure` branch of a method (or begin/end block) is always run, whether an exception was raised or not. However, there is no implicit return value from an `ensure` branch, and so instead the implicit return value is set to the result of expression that ran just before the `ensure` branch was executed.
+The `ensure` branch of a method (or begin/end block) is always run, whether an exception was raised or not. However, there is no implicit return value from an `ensure` branch, and so instead the implicit return value is set to the result of the expression that ran just before the `ensure` branch was executed.
 
 -----------------------------------------------------------------
 
@@ -1689,7 +1689,7 @@ Hello World!
 
 **A42:** B
 
-The `include` method mixes a module into a class so that its methods become available as instance methods..
+The `include` method mixes a module into a class so that its methods become available as instance methods.
 
 -----------------------------------------------------------------
 
@@ -1845,7 +1845,7 @@ p set.select { |e| e > "W" }
 
 **A45:** (B)
 
-The `Enumerable` mixin expects that any object it is mixed into will implement an `each` method, which yields elements one y one to a block. The many list processing features of `Enumerable` are all implemented on top of `each` in some way or another.
+The `Enumerable` mixin expects that any object it is mixed into will implement an `each` method, which yields elements one by one to a block. The many list processing features of `Enumerable` are all implemented on top of `each` in some way or another.
 
 To understand `Enumerable` better, it can help to think about how each of its features might be implemented manually. For example, suppose that `each` has already been defined, then a `select` method could be defined as follows:
 
@@ -2007,7 +2007,7 @@ The `>>` operator generates a new `Date` object that is *n months* later than th
 In cases where the exact day of month cannot be matched (i.e. a month with 31 days vs. 30 days, or leap year vs. non-leap year), the `<<` and `>>` operators will return a date corresponding to the last valid date in that month.
 
 ```
-puts(Date.new(2016,2,29) << 12) #=> 2015-12-28
+puts(Date.new(2016,2,29) << 12) #=> 2015-02-28
 puts(Date.new(2016,12,31) << 1) #=> 2016-11-30
 puts(Date.new(2016,12,31) << 2) #=> 2016-10-31
 ```
