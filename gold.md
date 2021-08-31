@@ -597,7 +597,7 @@ p copy
 
 Both `Object#dup` and `Object#clone` produce shallow copies. In the case of an `Array`, this means that the array itself is copied, but the objects within the array are not. So in this specific exaple `original[0]` and `copy[0]` both still reference the same object.
 
-One convention that can be used for creating deep copies in Ruby is to serialize and then deserialize an object, using the `Marsal` core class, e.g. `copy = Marsal.load(Marhal.dump(original))`.
+One convention that can be used for creating deep copies in Ruby is to serialize and then deserialize an object, using the `Marshal` core class, e.g. `copy = Marshal.load(Marshal.dump(original))`.
 
 -----------------------------------------------------------------
 
