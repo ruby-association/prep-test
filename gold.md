@@ -16,7 +16,7 @@ banana
 *A:*
 ```
 require "stringbuffer"
-x = StringBuffer.new("apple\banana\n")
+x = StringBuffer.new("apple\nbanana\n")
 ```
 
 *B:*
@@ -28,13 +28,13 @@ x = StringIO.new("apple\nbanana\n")
 *C:*
 ```
 require "strio"
-x = StrIO.new("apple\banana\n")
+x = StrIO.new("apple\nbanana\n")
 ```
 
 *D:*
 ```
 require "mockio"
-x = MockIO.new("apple\banana\n")
+x = MockIO.new("apple\nbanana\n")
 ```
 
 -----------------------------------------------------------------
