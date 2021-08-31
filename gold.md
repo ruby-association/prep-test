@@ -1091,7 +1091,7 @@ done!
 
 Within a `catch` block, code executes normally until a `throw` statement is executed. Then if the symbol passed via `throw` matches the `catch` symbol, Ruby terminates the block and continues running whatever follows it. 
 
-If a `catch` block does not match the `throw`, Ruby will continue in an inside-out fashion through any nested `catch` blocks until it finds one that matches the thrown symbol or reaches the top-level, where an uncaught through will cause an exception to be raised.
+If a `catch` block does not match the `throw`, Ruby will continue in an inside-out fashion through any nested `catch` blocks until it finds one that matches the thrown symbol or reaches the top-level, where an uncaught `throw` will cause an exception to be raised.
 
 -----------------------------------------------------------------
 
