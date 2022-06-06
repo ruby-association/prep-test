@@ -11,7 +11,7 @@ logically false, all other objects are treated as logically true.
 
 The complete list of reserved words as of Ruby 2.1 is listed below:
 
-![](http://www.ruby.or.jp/en/certification/examination//index.data/ruby-keywords.png)
+![Ruby keywords](ruby-keywords.png)
 
 ---------------------------------------------------------------------------
 
