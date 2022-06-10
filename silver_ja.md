@@ -1,8 +1,8 @@
-# Ruby Association Certified Ruby Examination Silver Sample Questions
+# Ruby技術者認定試験Silver模擬問題
 
-[Answers](silver_answers.md)
+[回答](silver_answers_ja.md)
 
-**Q1. Which of the following have true values in Ruby? (Choose two.)**
+**Q1. Rubyにおける真の値として正しいものをすべて選んでください。(2つ選択)**
 
 - (a) `""` 
 - (b) `0` 
@@ -11,7 +11,7 @@
 
 -------------------------------------------------------------------------
 
-**Q2. Which of the following are reserved words in Ruby? (Choose two.)**
+**Q2. Rubyの予約語として正しいものをすべて選んでください。(2つ選択)**
 
 - (a) `each`
 - (b) `rand`
@@ -21,7 +21,7 @@
 
 ---------------------------------------------------------------------------
 
-**Q3. Which variable name is valid in Ruby? (Choose one.)**
+**Q3. Rubyの変数名として正しいものを選んでください。(1つ選択)**
 
 - (a) `3y`
 - (b) `false`
@@ -30,13 +30,14 @@
 
 ---------------------------------------------------------------------------
 
-**Q4. Which of the following can be inserted into `__(1)__`  in order to generate the output below? (Choose two.)** 
+**Q4. 以下の実行結果を出力するコードがあります。
+__(1)__に入る適切な記述を選択してください。(2つ選択)** 
 
 ```
 $code = "CODE"
 __(1)__
 
-[Output]
+[出力]
 i like writing CODE
 ```
 
@@ -47,14 +48,14 @@ i like writing CODE
 
 ---------------------------------------------------------------------------
 
-**Q5. Given the following:** 
+**Q5. 以下のコードがあります。** 
 
 ```
 num = 025
 puts num
 ```
 
-**Which is the correct output? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 - (a) `nil`
 - (b) `025`
@@ -63,7 +64,7 @@ puts num
 
 ---------------------------------------------------------------------------
 
-**Q6. Given the following:**
+**Q6. 以下のコードがあります。**
 
 ```
 x = "Hello"
@@ -71,7 +72,7 @@ y = x.empty? ? 1 : 2
 p y
 ```
 
-**Which is the correct output? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 - (a) 1
 - (b) 2
@@ -80,7 +81,7 @@ p y
 
 ---------------------------------------------------------------------------
 
-**Q7. Given the following:**
+**Q7. 以下のコードがあります。**
 
 ```
 amount = 120
@@ -100,11 +101,11 @@ p size
 - (c) `"L"`
 - (d) `"XL"`
 
-**Which is the correct output? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 ---------------------------------------------------------------------------
 
-**Q8. Given the following:**
+**Q8. 以下のコードがあります。**
 
 ```
 item = "apple"
@@ -116,13 +117,13 @@ end
 puts item
 ```
 
-**Which is the correct result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 *(a)*
-A syntax error occurs
+文法エラーが発生する
 
 *(b)*
-An exception is raised
+例外が発生する
 
 *(c)*
 ```
@@ -142,7 +143,7 @@ apple
 
 ---------------------------------------------------------------------------
 
-**Q9. Given the following:**
+**Q9. 以下のコードがあります。**
 
 ```
 x = 0
@@ -154,17 +155,17 @@ end
 p x
 ```
 
-**Which is the correct result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 
 - (a) `0`
 - (b) `4`
 - (c) `6`
-- (d) A syntax error occurs
+- (d) 文法エラーが発生する
 
 ---------------------------------------------------------------------------
 
-**Q10. Given the following:**
+**Q10. 以下のコードがあります。**
 
 ```
 s = "abcde"
@@ -173,37 +174,38 @@ p s.each_char.map { |i|
 }
 ```
 
-**Which is the correct result? (Choose one)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 - (a) `[97, 98, 99, 100, 101]`
 - (b) `[194, 196, 198, 200, 202]`
 - (c) `["a", "b", "c", "d", "e"]`
 - (d) `["aa", "bb", "cc", "dd", "ee"]`
-- (e) An error occurs at run-time.
+- (e) 実行時にエラーになる
 
 ---------------------------------------------------------------------------
 
-**Q11. Given the following:**
+**Q11. 以下のコードがあります。**
 
 ```
 p "cocoa".chars.tally
 ```
 
-**Which is the correct result? (Choose one)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 - (a) `{99=>2, 111=>2, 97=>1}`
 - (b) `{?c=>2, ?o=>2, ?a=>1}`
 - (c) `{"c"=>2, "o"=>2, "a"=>1}`
-- (d) An error occurs at run-time.
+- (d) 実行時にエラーになる
 
 ---------------------------------------------------------------------------
 
-**Q12. Which of the following can be inserted into `__(1)__`  in order to generate the output below? (Choose one.)** 
+**Q12. 以下の実行結果を出力するコードがあります。
+__(1)__に入る適切な記述を選択してください。(1つ選択)** 
 
 ```
 puts "blah blah blah".__(1)__(/blah/, "yay")
 
-[Output]
+[出力]
 yay yay yay
 ```
 
@@ -214,7 +216,7 @@ yay yay yay
 
 ---------------------------------------------------------------------------
 
-**Q13. Given the following:**
+**Q13. 以下のコードがあります。**
 
 ```
 s = "pear"
@@ -228,16 +230,16 @@ else
 end
 ```
 
-**Which is the correct result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 - (a) blank
 - (b) short
 - (c) long
-- (d) an exception is raised
+- (d) 例外が発生する
 
 ---------------------------------------------------------------------------
 
-**Q14: Given the following:**
+**Q14: 以下のコードがあります。**
 
 ```
 ["foo: abc", "bar: 100"].each do |i|
@@ -245,7 +247,7 @@ end
 end
 ```
 
-**Which is the correct result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 *(a)*
 ```
@@ -266,14 +268,14 @@ false
 ```
 
 *(d)*
-A syntax error occurs.
+文法エラーが発生する
 
 *(e)*
-An error occurs at run-time.
+実行時にエラーになる
  
 ---------------------------------------------------------------------------
 
-**Q15: Given the following:**
+**Q15: 以下のコードがあります。**
 
 ```
 def foo(x: 1, y: 2, z: 3)
@@ -283,16 +285,17 @@ end
 foo(y: 4, z: 5)
 ```
 
-**Which is the correct result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 - (a) `[1, 2, 3]`
 - (b) `[1, 4, 5]`
-- (c) A syntax error occurs.
-- (d) An error occurs at run-time.
+- (c) 文法エラーが発生する
+- (d) 実行時にエラーになる
  
 ---------------------------------------------------------------------------
 
-**Q16: Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose one.)** 
+**Q16: 以下の実行結果を出力するコードがあります。
+__(1)__に入る適切な記述を選択してください。(1つ選択)** 
 
 ```
 def foo(x:, y:, z:)
@@ -301,7 +304,7 @@ end
 
 h = {x: 1, y: 2, z: 3}
 __(1)__
-[Output]
+[出力]
 [1, 2, 3]
 ```
 
@@ -312,7 +315,7 @@ __(1)__
 
 ---------------------------------------------------------------------------
 
-**Q17. Which of the following regular expressions only match the string "Ruby" or "ruby"? (Choose two.)**
+**Q17. "Ruby"または"ruby"のいずれかの文字列のみにマッチする正規表現をすべて選択してください。(2つ選択)**
 
 - (a) `/\A[Rr]uby\z/`
 - (b) `/\ARuby|ruby\z/`
@@ -321,7 +324,7 @@ __(1)__
 
 ---------------------------------------------------------------------------
 
-**Q18.Given the following:**
+**Q18.以下のコードがあります。**
 
 ```
 MSG = 42
@@ -329,16 +332,16 @@ MSG += 5
 p MSG
 ```
 
-**What is the correct result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
-- (a) `47` is displayed without warning.
-- (b) An error occurs because MSG is a constant.
-- (c) `42` is displayed because MSG is a constant.
-- (d) A warning appears beacuse MSG is a constant but `47` is displayed.
+- (a) 警告なしで`47`が表示される。
+- (b) MSGは定数なのでエラーが発生する。
+- (c) MSGは定数なので`42`が表示される。
+- (d) MSGは定数なので警告が表示されるが、`47`が表示される。
 
 ---------------------------------------------------------------------------
 
-**Q19. Given the following:**
+**Q19. 以下のコードがあります。**
 
 ```
 MSG = "hello"
@@ -346,26 +349,26 @@ MSG.upcase!
 p MSG
 ```
 
-**What is the correct result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
-- (a) An error occurs because MSG is a constant.
-- (b) `HELLO` is displayed without warning.
-- (c) A warning apears because MSG is a constant but `HELLO` is displayed
-- (d) `hello` is displayed since MSG is a constant.
-
----------------------------------------------------------------------------
-
-**Q20. Which of the following statements are true? (Choose two.):**
-
-- (a) Local variables start with a lower case letter, and are two or more characters in length.
-- (b) Global variables start with $.
-- (c) Instance variables start with *.
-- (d) Class variables start with $.
-- (e) Constants start with an upper case letter.
+- (a) MSGは定数なのでエラーが発生する。
+- (b) 警告なしで`HELLO`が表示される。
+- (c) MSGは定数なので警告が表示されるが、`HELLO`が表示される。
+- (d) MSGは定数なので`hello`が表示される。
 
 ---------------------------------------------------------------------------
 
-**Q21. Given the following:**
+**Q20. 以下の説明のうち正しいものをすべて選択してください。(2つ選択)**
+
+- (a) ローカル変数は小文字ではじまり、2文字以上の長さである。
+- (b) グローバル変数は$ではじまる。
+- (c) インスタンス変数は*ではじまる。
+- (d) クラス変数は$ではじまる。
+- (e) 定数は大文字ではじまる。
+
+---------------------------------------------------------------------------
+
+**Q21. 以下のコードがあります。**
 
 ```
 x = [1,2,3,4,5,6,7,8]
@@ -375,7 +378,7 @@ p x
 p y
 ```
 
-**Which is the correct output? (Choose one)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 
 *(a)*
@@ -404,7 +407,7 @@ p y
 
 ---------------------------------------------------------------------------
 
-**Q22. Given the following:**
+**Q22. 以下のコードがあります。**
 
 ```
 a = [ 2, 4, 6, 8, 10 ]
@@ -419,18 +422,19 @@ p a
 - (c) `[4, 6, 8, 12]`
 - (d) `[4, 6, 8]`
 
-**Which is the correct output? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 ---------------------------------------------------------------------------
 
-**Q23. Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose one.)** 
+**Q23. 以下の実行結果を出力するコードがあります。
+__(1)__に入る適切な記述を選択してください。(1つ選択)** 
 
 ```
 x = true
 x __(1)__ exit(1)
 puts("succeeded!")
 
-[Output]
+[出力]
 succeeded!
 ```
 
@@ -442,7 +446,7 @@ succeeded!
 
 ---------------------------------------------------------------------------
 
-**Q24. Given the following:**
+**Q24. 以下のコードがあります。**
 
 ```
 m = true
@@ -450,23 +454,24 @@ m or n = true
 p n
 ```
 
-**Which is the correct result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 
 - (a) `true`
 - (b) `false`
 - (c) `nil`
-- (d) A syntax error occurs.
+- (d) 文法エラーが発生する
 
 ---------------------------------------------------------------------------
 
-**Q25. Which of the following can be inserted into __(1)__  in order for the given code to generate the output below? (Choose two.)** 
+**Q25. 以下の実行結果を出力するコードがあります。
+__(1)__に入る適切な記述を選択してください。(2つ選択)** 
 
 ```
 x = [ 9, 7, 5, 3, 1 ]
 p __(1)__
 
-[Output]
+[出力]
 [7, 5, 3]
 ```
 
@@ -477,13 +482,14 @@ p __(1)__
 
 ---------------------------------------------------------------------------
 
-**Q26. Which of the following can be inserted into __(1)__  in order for the given code to generate the output below? (Choose two.)** 
+**Q26. 以下の実行結果を出力するコードがあります。
+__(1)__に入る適切な記述を選択してください。(2つ選択)** 
 
 ```
 ary = [ 1, 2, 3, 4, 5 ]
 p ary.__(1)__ { |i| i.odd? }
 
-[Output]
+[出力]
 [1, 3, 5]
 ```
 
@@ -495,22 +501,22 @@ p ary.__(1)__ { |i| i.odd? }
 
 ---------------------------------------------------------------------------
 
-**Q27. Given the following:**
+**Q27. 以下のコードがあります。**
 
 ```
 puts "42A7".to_i
 ```
 
-**What is the correct result? (Choose one)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 - (a) 42
 - (b) 42A7
 - (c) 17063
-- (d) An error occurs at run-time.
+- (d) 実行時にエラーになる
 
 ---------------------------------------------------------------------------
 
-**Q28. Which of the following methods will NOT show you if the element `:c` exists in the hash key or not? (Choose one.)**
+**Q28. 次のメソッドのうち`:c`がハッシュのキーとして存在するかどうかを「返さない」ものを選択してください。(1つ選択)**
 
 ```
 h = {a: 2, b: 4, c: 6, d: 8, e: 10}
@@ -524,14 +530,15 @@ h = {a: 2, b: 4, c: 6, d: 8, e: 10}
 
 ---------------------------------------------------------------------------
 
-**Q29. "Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose two.)** 
+**Q29. "以下の実行結果を出力するコードがあります。
+__(1)__に入る適切な記述を選択してください。(2つ選択)** 
 
 ```
 a = [120, 40, 20, 80, 160, 60, 180]
 a.__(1)__
 p a
 
-[Output]
+[出力]
 [120, 80, 160, 180]
 ```
 
@@ -544,12 +551,13 @@ p a
 
 ---------------------------------------------------------------------------
 
-**Q30. Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose one.)**
+**Q30. 以下の実行結果を出力するコードがあります。
+__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 ```
 p ["apple", "banana"] __(1)__ ["banana", "carrot"]
 
-[Output]
+[出力]
 ["apple", "banana", "carrot"]
 ```
 
@@ -561,13 +569,13 @@ p ["apple", "banana"] __(1)__ ["banana", "carrot"]
 
 ---------------------------------------------------------------------------
 
-**Q31. Given the following:**
+**Q31. 以下のコードがあります。**
 
 ```
 p %i(x1 x2 x3)
 ```
 
-What is the correct result? (Choose one.)
+実行結果として正しいものを選択してください。(1つ選択)
 
 - (a) `"x1 x2 x3"`
 - (b) `[1, 2, 3]`
@@ -576,7 +584,7 @@ What is the correct result? (Choose one.)
 
 ---------------------------------------------------------------------------
 
-**Q32. Given the following:**
+**Q32. 以下のコードがあります。**
 
 ```
 class SomeError < StandardError; end
@@ -595,7 +603,7 @@ rescue SomeOtherError
 end
 ```
 
-What is the correct result? (Choose one.)
+実行結果として正しいものを選択してください。(1つ選択)
 
 - (a) A syntax error
 - (b) `SomeError`
@@ -604,7 +612,7 @@ What is the correct result? (Choose one.)
 
 ---------------------------------------------------------------------------
 
-**Q33. Given the following:**
+**Q33. 以下のコードがあります。**
 
 ```
 begin
@@ -618,7 +626,7 @@ ensure
 end
 ```
 
-**Which is the correct output? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 *(a)*
 ```
@@ -646,19 +654,19 @@ Error: ZeroDivisionError
 
 ---------------------------------------------------------------------------
 
-**Q34. Which of the following statements appropriately applies to class in Ruby? (Choose one.)**
+**Q34. Rubyのクラスの説明として正しいものを選択してください。(1つ選択)**
 
-*For a class which does not explicitly specify a superclass:*
+クラスのスーパークラスを明示的に指定しなかった場合、
 
-- (a) an `UndefinedParentClassError` exception is raised
-- (b) a syntax error occurs
-- (c) the `Module` class becomes the superclass.
-- (d) the class is created without a superclass.
-- (e) the `Object` class becomes the superclass.
+- (a) 例外`UndefinedParentClassError`が発生する
+- (b) 文法エラーが発生する
+- (c) `Module`クラスがスーパークラスになる
+- (d) スーパークラスのないクラスが作成される
+- (e) `Object`クラスがスーパークラスになる
 
 ---------------------------------------------------------------------------
 
-**Q35. Given the following:**
+**Q35. 以下のコードがあります。**
 
 ```
 class Object
@@ -670,16 +678,17 @@ end
 "Cow".moo
 ```
 
-**What is the correct result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
-- (a) No output.
-- (b) An error occurs at run-time.
+- (a) 何も出力されない
+- (b) 実行時にエラーになる
 - (c) `MOO!`
 - (d) `nil`
 
 ---------------------------------------------------------------------------
 
-**Q36. Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose one.)** 
+**Q36. 以下の実行結果を出力するコードがあります。
+__(1)__に入る適切な記述を選択してください。(1つ選択)** 
 
 ```
 class Shouter
@@ -695,7 +704,7 @@ end
 g = Shouter.new("Hello, world!")
 g.greet
 
-[Output]
+[出力]
 HELLO, WORLD!
 ```
 
@@ -706,7 +715,8 @@ HELLO, WORLD!
 
 ---------------------------------------------------------------------------
 
-**Q37. Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose one.)** 
+**Q37. 以下の実行結果を出力するコードがあります。
+__(1)__に入る適切な記述を選択してください。(1つ選択)** 
 
 ```
 class Shouter
@@ -722,7 +732,7 @@ end
 g = __(1)__("Hello, world!")
 g.greet
 
-[Output]
+[出力]
 HELLO, WORLD!
 ```
 
@@ -733,7 +743,7 @@ HELLO, WORLD!
 
 ---------------------------------------------------------------------------
 
-**Q38. Given the following:**
+**Q38. 以下のコードがあります。**
 
 ```
 class Foo
@@ -754,22 +764,23 @@ bar = Bar.new
 puts bar.var
 ```
 
-**What is the correct result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 
 - (a) apple
 - (b) banana
-- (c) No output.
-- (d) An error occurs at run-time.
+- (c) 何も出力されない
+- (d) 実行時にエラーになる
 
 ---------------------------------------------------------------------------
 
-**Q39. Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose two.)**
+**Q39. 以下の実行結果を出力するコードがあります。
+__(1)__に入る適切な記述を選択してください。(2つ選択)**
 
 ```
 puts "$foo$".__(1)__("$")
 
-[Output]
+[出力]
 foo$
 ```
 
@@ -780,13 +791,14 @@ foo$
 
 ---------------------------------------------------------------------------
 
-**Q40. Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose one.)**
+**Q40. 以下の実行結果を出力するコードがあります。
+__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 ```
 r = "a".."e"
 p r.__(1)__
 
-[Output]
+[出力]
 ["a", "b", "c", "d", "e"]
 ```
 
@@ -797,13 +809,13 @@ p r.__(1)__
 
 ---------------------------------------------------------------------------
 
-**Q41. Given the following:**
+**Q41. 以下のコードがあります。**
 
 ```
 p [0,1,2,3,4,5].find {|x| x < 3}
 ```
 
-**Which is the correct output? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 - (a) `[0, 1, 2]` 
 - (b) `0`
@@ -812,12 +824,13 @@ p [0,1,2,3,4,5].find {|x| x < 3}
 
 ---------------------------------------------------------------------------
 
-**Q42. Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose two.)** 
+**Q42. 以下の実行結果を出力するコードがあります。
+__(1)__に入る適切な記述を選択してください。(2つ選択)** 
 
 ```
 p [1,16,8,4,2].__(1)__
 
-[Output]
+[出力]
 [16, 8, 4, 2, 1]
 ```
 
@@ -829,13 +842,14 @@ p [1,16,8,4,2].__(1)__
 
 ---------------------------------------------------------------------------
 
-**Q43. Which of the following can be inserted into __(1)__ in order for the given code to sort an array in descending order? (Choose one.)**
+**Q43. 配列を降順にソートするコードがあります。
+__(1)__に入る適切な記述を選択してください。(2つ選択)** 
 
 ```
 ary = [2,4,8,1,16]
 p ary.__(1)__
 
-[Output]
+[出力]
 [16, 8, 4, 2, 1]
 ```
 
@@ -846,7 +860,7 @@ p ary.__(1)__
 
 ---------------------------------------------------------------------------
 
-**Q44. Given the following:**
+**Q44. 以下のコードがあります。**
 
 ```
 File.write("test", "hellorubyworld\n")
@@ -856,7 +870,7 @@ File.open("test") do |file|
 end
 ```
 
-**Which is the correct output? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 - (a) hello
 - (b) rubyworld
@@ -866,7 +880,7 @@ end
 
 ---------------------------------------------------------------------------
 
-**Q45. The code below was used to open a file omitting the second argument of the open method.  In this case, which of the following is implicitly specified? (Choose one.)**
+**Q45. 以下のコードではopenメソッドの第2引数を省略してファイルを開いています。このケースで暗黙的に第2引数として指定されるものを選択してください。**
 
 ```
 file = open("sample.txt")
@@ -881,9 +895,10 @@ file = open("sample.txt")
 
 ---------------------------------------------------------------------------
 
-**Q46: Which of the following can be inserted into `__(1)__`  in order for the given code to copy the content of file "test_one.txt" to file "test_two.txt"?**
+**Q46: test_one.txtの内容をtest_two.txtにコピーするコードがあります。
+__(1)__に入る適切な記述を選択してください。**
 
-**In the case that the “test_two.txt” file already exist, this code should set first the file size to zero and then overwrites its content from the beginning. (Choose two.)**
+**test_two.txtがすでに存在する場合、このコードは最初にファイルサイズを0にし、先頭から内容を上書きするものとします。(2つ選択)**
 
 ```
 open("test_one.txt") {|source|
@@ -901,7 +916,7 @@ open("test_one.txt") {|source|
 
 ---------------------------------------------------------------------------
 
-**Q47: Which class methods do NOT belong to `Dir` class? (Choose two.)**
+**Q47: `Dir`クラスに存在しないクラスメソッドを選択してください。(2つ選択)**
 
 - (a) `Dir.pwd`
 - (b) `Dir.rename`
@@ -911,24 +926,24 @@ open("test_one.txt") {|source|
 
 ---------------------------------------------------------------------------
 
-**Q48. Given the following:**
+**Q48. 以下のコードがあります。**
 
 ```
 p "hello ruby world"[6,4]
 ```
 
-**What is the correct result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 - (a) `"hello "`
 - (b) `"ruby"`
 - (c) `" world"`
-- (d) An error occurs at run-time.
+- (d) 実行時にエラーになる
 
 ---------------------------------------------------------------------------
 
 **Q49:** 
 
-Given the following:
+以下のコードがあります。
 
 ```
 str = "bat"
@@ -936,7 +951,7 @@ str[1,1] = "o"
 p str
 ```
 
-Which is the correct output? (Choose one.)
+実行結果として正しいものを選択してください。(1つ選択)
 
 - (a) `"boo"`
 - (b) `"bot"`
@@ -945,16 +960,16 @@ Which is the correct output? (Choose one.)
 
 ---------------------------------------------------------------------------
 
-**Q50. Given the following:**
+**Q50. 以下のコードがあります。**
 
 ```
 puts 5 * "hi"
 ```
 
-**What is the correct result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 - (a) `"hihihihihi"`
-- (b) An error occurs at run-time.
+- (b) 実行時にエラーになる
 - (c) `"5hi"`
 - (d) `"5*hi"`
 

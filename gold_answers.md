@@ -1,6 +1,8 @@
-**A1:** (B)
+**A1:** (A), (D)
 
-The `StringIO` object (from the standard library) provides an IO-like object that operates on strings rather than file/network/stdio streams. This object can be useful for testing code that relies on I/O operations.
+[Module#define_method](https://docs.ruby-lang.org/en/3.1/Module.html#method-i-define_method) defines an instance method in the receiver. However, the variable `name` is shared by `Stack#push` and `Stack#pop` in (B), so both methods call `@contents.send(:pop, *args)`.
+
+`def` defines a singleton method in [BasicObject#instance_eval](https://docs.ruby-lang.org/en/3.1/BasicObject.html#method-i-instance_eval), while `def` defines an instance method in [Module#class_eval](https://docs.ruby-lang.org/en/3.1/Module.html#method-i-class_eval).
 
 -----------------------------------------------------------------
 
@@ -34,21 +36,15 @@ Note that the `force()` method on `Enumerator::Lazy` is just an alias for `Enume
 
 -----------------------------------------------------------------
 
-**A5:** (B)
+**A5:** (D)
 
-A `Fiber` is used to implement coroutine-like functionality which allows for partially completing a computation before returning control back the the caller, and then resuming later to compute the next result.
-
-The block provided when initializing a `Fiber` is not executed immediately, but instead gets run whenever `Fiber#resume` is called. Execution will continue until `Fiber.yield` is called or until the end of the block is reached, and then the result will be returned.
-
-If the fiber yields, then the next call to `Fiber#resume` would continue execution immediately after that instruction in the block.
+`...` forwards rest arguments including keyword arguments and the block.
 
 -----------------------------------------------------------------
 
 **A6:** (A)
 
-Private methods can only be invoked in functional style from within a class definition.
-
-Calling `self.some_method()` attempts to invoke a method via an object's external API, therefore it will raise an exception if `some_method()` is a private method.
+Private methods cannot be called with an explicit receiver, except when the receiver is `self`.
 
 -----------------------------------------------------------------
 
@@ -116,17 +112,17 @@ The `->(...) { }` (lambda literal) syntax is a shorthand notation equivalent to 
 
 -----------------------------------------------------------------
 
-**A14:** (A)
+**A14:** (D)
 
-The frozen status of an object is preserved by `clone`, whereas `dup` will create an unfrozen shallow copy of an object that can be modified.
+`define_method` at toplevel defines a method in `Object`.
+
+(A), (B), and (C) creates an `Proc` object, and assigns it to a local variable `add`, but `add(1, 2)` doesn't call the `Proc` object.
 
 -----------------------------------------------------------------
 
-**A15:** (B)
+**A15:** (C)
 
-Both `Object#dup` and `Object#clone` produce shallow copies. In the case of an `Array`, this means that the array itself is copied, but the objects within the array are not. So in this specific example `original[0]` and `copy[0]` both still reference the same object.
-
-One convention that can be used for creating deep copies in Ruby is to serialize and then deserialize an object, using the `Marshal` core class, e.g. `copy = Marshal.load(Marshal.dump(original))`.
+`<<~EOF` is called a squiggly heredoc, and it strips leading whitespace.
 
 -----------------------------------------------------------------
 
@@ -158,13 +154,15 @@ The `Kernel#p` method calls `inspect` on its arguments in order to produce strin
 
 **A19:** (D)
 
-The `to_str` method is rarely implemented in practice, because it is only useful for situations in which you have an object that closely maps to Ruby's `String` concept, but is not a `String` itself. So while this method might be implemented by certain low-level data structures, it is not meant to be used for similar purposes to what `to_s` and `inspect` are used for.
+`x..` represents a semi-infinite range.
+
+[Enumerable#lazy](https://docs.ruby-lang.org/en/3.1/Enumerable.html#method-i-lazy) returns an Enumerator::Lazy, which redefines most Enumerable methods to postpone enumeration and enumerate values only on an as-needed basis.
 
 -----------------------------------------------------------------
 
 **A20: (B)**
 
-When an array is used on the right hand side of a parallel assignment statement, it is expanded as much as needed to map rvalues to the lvalues listed on the left hand side. This means that the number of variables on the left hand side does not need to be equal to the the length of the array.
+[Enumerable#filter_map](https://docs.ruby-lang.org/en/3.1/Enumerable.html#method-i-filter_map) returns an array containing truthy elements returned by the block.
 
 -----------------------------------------------------------------
 
@@ -180,10 +178,9 @@ The splat operator (`*`) when used with a method parameter makes it so that all 
 
 -----------------------------------------------------------------
 
-**A23:** (A) and (B)
+**A23:** (A)
 
-When the splat operator (`*`) is called on an array in a method call, the array is expanded and treated as an arguments list to be passed to the method.
-
+`_1`, `_2`, `_3`... are implicitly defined block parameters called **numbered parameters**.
 
 -----------------------------------------------------------------
 
@@ -207,7 +204,7 @@ Because classes are objects in Ruby, it is possible to define class instance var
 
 All objects in Ruby also have a *singleton class* associated with them, even class objects.
 
-In this example, there is an instance variable named `@message`on the `Speaker` class as well as on the singleton class of `Speaker`. These are two seperate variables.
+In this example, there is an instance variable named `@message` on the `Speaker` class as well as on the singleton class of `Speaker`. These are two seperate variables.
 
 The singleton method `Speaker.speak` is evaluated in the context of the `Speaker` class, and so `@message` refers to the instance variable defined within the `Speaker` class definition, and not the instance variable defined within the singleton class of `Speaker`.
 
@@ -243,7 +240,7 @@ ArgumentError < StandardError < Exception
 ScriptError < Exception
 ```
 
-If `rescue` is called without a specific error class, it will catch `StandardError` and its descendents by default. Most exceptions in core Ruby are descendents of `StandardError`, but there are some that are not usually meant to be rescued which exist in other class hierarchies which descend directly from the `Exception` base clase.
+If `rescue` is called without a specific error class, it will catch `StandardError` and its descendents by default. Most exceptions in core Ruby are descendents of `StandardError`, but there are some that are not usually meant to be rescued which exist in other class hierarchies which descend directly from the `Exception` base class.
 
 -----------------------------------------------------------------
 
@@ -332,7 +329,7 @@ obj.greet
 
 -----------------------------------------------------------------
 
-**A42:** B
+**A42:** (B)
 
 The `include` method mixes a module into a class so that its methods become available as instance methods.
 
@@ -344,12 +341,11 @@ A `protected` method can only be called from within an instance of the same clas
 
 -----------------------------------------------------------------
 
-**A44:** (B) and (C)
+**A44:** (B)
 
-Note that:
+[Pattern matching](https://docs.ruby-lang.org/en/3.1/syntax/pattern_matching_rdoc.html) is a feature allowing deep matching of structured values.
 
-- Private methods are not directly callable from another object, even if it is an instance of the same class.
-- There is no `static` keyword in Ruby.
+For pattern matching, `in` is used instead of `when` in the `case` expression.
 
 -----------------------------------------------------------------
 
@@ -413,22 +409,25 @@ puts(Date.new(2016,12,31) << 2) #=> 2016-10-31
 
 -----------------------------------------------------------------
 
-**A48:** (A)
+**A48:** (D)
 
-The `+` operator is used to produce a new `Date` object that is *n days* later.
-There is also a `-` operator which produces dates that are *n days* earlier.
+[Time.strptime](https://docs.ruby-lang.org/en/3.1/Time.html#method-c-strptime) parses the given string with the given template, and creates a Time object.
 
------------------------------------------------------------------
-
-**A49:** (D)
-
-The `OpenURI` standard library extends the functionality of `Kernel#open` to allow treating HTTP-based resources as if they were a file. It is a wrapper around the low-level `Net::HTTP` standard library.
+[Time.parse](https://docs.ruby-lang.org/en/3.1/Time.html#method-c-parse) parses the given string using a heuristic, and doesn't take a template.
 
 -----------------------------------------------------------------
 
-**A50:** (A)
+**A49:** (A)
 
-Environment variables are accessed via the `ENV` constant, which refers to a Hash-like object that represents both the variable names and their values as strings.
+The `Singleton` module implements [the Singleton pattern](http://w3sdesign.com/?gr=c05&ugr=proble).
+
+`include Singleton` adds the class method `instance`, which returns the only instance of the class.
+
+-----------------------------------------------------------------
+
+**A50:** (C)
+
+The `Forwardable` module provides delegation of specified methods to a designated object, using [Forwardable.def_delegator](https://docs.ruby-lang.org/en/3.1/Forwardable.html#method-i-def_delegator)
 
 -----------------------------------------------------------------
 
