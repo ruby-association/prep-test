@@ -396,8 +396,6 @@ Rubyの数値クラスの`<=>`の動作は、この挙動を自動的に提供�
 
 **A44: (b)**
 
-The `seek` method is used to move to a specific byte offset in an I/O stream.
-Offsets are zero-based, so `seek(5)` sets the position in the stream to just *after* the fifth byte.
 `seek`メソッドはI/Oストリームの特定のバイトオフセットに移動するために使用されます。
 オフセットは0ベースで、`seek(5)`は5バイト目の直後の位置にセットします。
 
