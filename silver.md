@@ -32,7 +32,7 @@
 
 **Q4. Which of the following can be inserted into `__(1)__`  in order to generate the output below? (Choose two.)** 
 
-```
+```ruby
 $code = "CODE"
 __(1)__
 
@@ -49,7 +49,7 @@ i like writing CODE
 
 **Q5. Given the following:** 
 
-```
+```ruby
 num = 025
 puts num
 ```
@@ -65,7 +65,7 @@ puts num
 
 **Q6. Given the following:**
 
-```
+```ruby
 x = "Hello"
 y = x.empty? ? 1 : 2
 p y
@@ -82,7 +82,7 @@ p y
 
 **Q7. Given the following:**
 
-```
+```ruby
 amount = 120
 
 size = case amount
@@ -106,7 +106,7 @@ p size
 
 **Q8. Given the following:**
 
-```
+```ruby
 item = "apple"
 
 ["banana", "carrot", "daikon"].each do |item|
@@ -125,7 +125,7 @@ A syntax error occurs
 An exception is raised
 
 *(c)*
-```
+```ruby
 banana
 carrot
 daikon
@@ -133,7 +133,7 @@ daikon
 ```
 
 *(d)*
-```
+```ruby
 banana
 carrot
 daikon
@@ -144,7 +144,7 @@ apple
 
 **Q9. Given the following:**
 
-```
+```ruby
 x = 0
 
 4.times do |i|
@@ -166,7 +166,7 @@ p x
 
 **Q10. Given the following:**
 
-```
+```ruby
 s = "abcde"
 p s.each_char.map { |i|
   i * 2
@@ -185,7 +185,7 @@ p s.each_char.map { |i|
 
 **Q11. Given the following:**
 
-```
+```ruby
 p "cocoa".chars.tally
 ```
 
@@ -200,7 +200,7 @@ p "cocoa".chars.tally
 
 **Q12. Which of the following can be inserted into `__(1)__`  in order to generate the output below? (Choose one.)** 
 
-```
+```ruby
 puts "blah blah blah".__(1)__(/blah/, "yay")
 
 [Output]
@@ -216,7 +216,7 @@ yay yay yay
 
 **Q13. Given the following:**
 
-```
+```ruby
 s = "pear"
 
 if s.empty?
@@ -239,7 +239,7 @@ end
 
 **Q14: Given the following:**
 
-```
+```ruby
 ["foo: abc", "bar: 100"].each do |i|
   p i.slice(/[0-9]+/)&.to_i
 end
@@ -248,19 +248,19 @@ end
 **Which is the correct result? (Choose one.)**
 
 *(a)*
-```
+```ruby
 0
 100
 ```
 
 *(b)*
-```
+```ruby
 nil
 100
 ```
 
 *(c)*
-```
+```ruby
 false
 100
 ```
@@ -275,7 +275,7 @@ An error occurs at run-time.
 
 **Q15: Given the following:**
 
-```
+```ruby
 def foo(x: 1, y: 2, z: 3)
   p [x, y, z]
 end
@@ -294,7 +294,7 @@ foo(y: 4, z: 5)
 
 **Q16: Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose one.)** 
 
-```
+```ruby
 def foo(x:, y:, z:)
   p [x, y, z]
 end
@@ -323,7 +323,7 @@ __(1)__
 
 **Q18.Given the following:**
 
-```
+```ruby
 MSG = 42
 MSG += 5
 p MSG
@@ -340,7 +340,7 @@ p MSG
 
 **Q19. Given the following:**
 
-```
+```ruby
 MSG = "hello"
 MSG.upcase!
 p MSG
@@ -367,7 +367,7 @@ p MSG
 
 **Q21. Given the following:**
 
-```
+```ruby
 x = [1,2,3,4,5,6,7,8]
 y = x
 x.reject! { |e| e.even? }
@@ -379,25 +379,25 @@ p y
 
 
 *(a)*
-```
+```ruby
 [1, 3, 5, 7]
 [1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
 *(b)*
-```
+```ruby
 [1, 2, 3, 4, 5, 6, 7, 8]
 [1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
 *(c)*
-```
+```ruby
 [1, 3, 5, 7]
 [1, 3, 5, 7]
 ```
 
 *(d)*
-```
+```ruby
 [1, 3, 5, 7]
 [2, 4, 6, 8]
 ```
@@ -406,7 +406,7 @@ p y
 
 **Q22. Given the following:**
 
-```
+```ruby
 a = [ 2, 4, 6, 8, 10 ]
 a.shift
 a.pop
@@ -425,7 +425,7 @@ p a
 
 **Q23. Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose one.)** 
 
-```
+```ruby
 x = true
 x __(1)__ exit(1)
 puts("succeeded!")
@@ -444,7 +444,7 @@ succeeded!
 
 **Q24. Given the following:**
 
-```
+```ruby
 m = true
 m or n = true
 p n
@@ -462,7 +462,7 @@ p n
 
 **Q25. Which of the following can be inserted into __(1)__  in order for the given code to generate the output below? (Choose two.)** 
 
-```
+```ruby
 x = [ 9, 7, 5, 3, 1 ]
 p __(1)__
 
@@ -479,7 +479,7 @@ p __(1)__
 
 **Q26. Which of the following can be inserted into __(1)__  in order for the given code to generate the output below? (Choose two.)** 
 
-```
+```ruby
 ary = [ 1, 2, 3, 4, 5 ]
 p ary.__(1)__ { |i| i.odd? }
 
@@ -497,7 +497,7 @@ p ary.__(1)__ { |i| i.odd? }
 
 **Q27. Given the following:**
 
-```
+```ruby
 puts "42A7".to_i
 ```
 
@@ -512,7 +512,7 @@ puts "42A7".to_i
 
 **Q28. Which of the following methods will NOT show you if the element `:c` exists in the hash key or not? (Choose one.)**
 
-```
+```ruby
 h = {a: 2, b: 4, c: 6, d: 8, e: 10}
 ```
 
@@ -526,7 +526,7 @@ h = {a: 2, b: 4, c: 6, d: 8, e: 10}
 
 **Q29. "Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose two.)** 
 
-```
+```ruby
 a = [120, 40, 20, 80, 160, 60, 180]
 a.__(1)__
 p a
@@ -546,7 +546,7 @@ p a
 
 **Q30. Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose one.)**
 
-```
+```ruby
 p ["apple", "banana"] __(1)__ ["banana", "carrot"]
 
 [Output]
@@ -563,7 +563,7 @@ p ["apple", "banana"] __(1)__ ["banana", "carrot"]
 
 **Q31. Given the following:**
 
-```
+```ruby
 p %i(x1 x2 x3)
 ```
 
@@ -578,7 +578,7 @@ What is the correct result? (Choose one.)
 
 **Q32. Given the following:**
 
-```
+```ruby
 class SomeError < StandardError; end
 class SomeOtherError < SomeError; end
 
@@ -606,7 +606,7 @@ What is the correct result? (Choose one.)
 
 **Q33. Given the following:**
 
-```
+```ruby
 begin
   ans = 100/0
   puts ans
@@ -660,7 +660,7 @@ Error: ZeroDivisionError
 
 **Q35. Given the following:**
 
-```
+```ruby
 class Object
   def moo
     puts "MOO!"
@@ -681,7 +681,7 @@ end
 
 **Q36. Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose one.)** 
 
-```
+```ruby
 class Shouter
   def __(1)__(message)
     @message = message
@@ -708,7 +708,7 @@ HELLO, WORLD!
 
 **Q37. Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose one.)** 
 
-```
+```ruby
 class Shouter
   def initialize(message)
     @message = message
@@ -735,7 +735,7 @@ HELLO, WORLD!
 
 **Q38. Given the following:**
 
-```
+```ruby
 class Foo
   attr_reader :var
   def initialize
@@ -766,7 +766,7 @@ puts bar.var
 
 **Q39. Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose two.)**
 
-```
+```ruby
 puts "$foo$".__(1)__("$")
 
 [Output]
@@ -782,7 +782,7 @@ foo$
 
 **Q40. Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose one.)**
 
-```
+```ruby
 r = "a".."e"
 p r.__(1)__
 
@@ -799,7 +799,7 @@ p r.__(1)__
 
 **Q41. Given the following:**
 
-```
+```ruby
 p [0,1,2,3,4,5].find {|x| x < 3}
 ```
 
@@ -814,7 +814,7 @@ p [0,1,2,3,4,5].find {|x| x < 3}
 
 **Q42. Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose two.)** 
 
-```
+```ruby
 p [1,16,8,4,2].__(1)__
 
 [Output]
@@ -831,7 +831,7 @@ p [1,16,8,4,2].__(1)__
 
 **Q43. Which of the following can be inserted into __(1)__ in order for the given code to sort an array in descending order? (Choose one.)**
 
-```
+```ruby
 ary = [2,4,8,1,16]
 p ary.__(1)__
 
@@ -848,7 +848,7 @@ p ary.__(1)__
 
 **Q44. Given the following:**
 
-```
+```ruby
 File.write("test", "hellorubyworld\n")
 File.open("test") do |file|
   file.seek(5)
@@ -868,7 +868,7 @@ end
 
 **Q45. The code below was used to open a file omitting the second argument of the open method.  In this case, which of the following is implicitly specified? (Choose one.)**
 
-```
+```ruby
 file = open("sample.txt")
 ```
 
@@ -885,7 +885,7 @@ file = open("sample.txt")
 
 **In the case that the “test_two.txt” file already exist, this code should set first the file size to zero and then overwrites its content from the beginning. (Choose two.)**
 
-```
+```ruby
 open("test_one.txt") {|source|
   open("test_two.txt", "__(1)__") {|dest|
     dest.write(source.read)
@@ -913,7 +913,7 @@ open("test_one.txt") {|source|
 
 **Q48. Given the following:**
 
-```
+```ruby
 p "hello ruby world"[6,4]
 ```
 
@@ -930,7 +930,7 @@ p "hello ruby world"[6,4]
 
 Given the following:
 
-```
+```ruby
 str = "bat"
 str[1,1] = "o"
 p str
@@ -947,7 +947,7 @@ Which is the correct output? (Choose one.)
 
 **Q50. Given the following:**
 
-```
+```ruby
 puts 5 * "hi"
 ```
 
