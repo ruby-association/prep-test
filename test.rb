@@ -3,10 +3,12 @@ require "timeout"
 
 class Test
   attr_reader :questions, :answers, :howto
+
+  DURATION = 60 * 90
+
   class Exit < StandardError; end
 
   class EndOfTime < StandardError; end
-  DURATION = 60 * 90
 
   def initialize(type: :silver)
     case type
@@ -24,7 +26,7 @@ class Test
       @answers = File.read("gold_answers.md").split(/^-------------.*\n/)[0..49]
       @answers.map! do |ans|
         ans.slice(/^\*\*A\d+:.*/).scan(/\(([A-Z])\)/).flatten(1).map { |i|
-          i.ord - ?A.ord
+          i.ord - "A".ord
         }
       end
       @test_symbol = "A"
@@ -85,7 +87,7 @@ class Test
   def get_user_answer
     puts "**Write you answers separated by commas:**"
     user_answer = gets
-    raise Exit if user_answer.match? /exit/i
+    raise Exit if user_answer.match?(/exit/i)
 
     user_answer.strip.split(",").map { |e| e.ord - @test_symbol.ord }
   end
