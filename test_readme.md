@@ -35,5 +35,3 @@ Write you answers separated by commas:
 A,B,C
 
 ----------------------------------------  
-  
-## To start the test enter `y`

@@ -25,6 +25,7 @@ p stack.pop
 **Which option can be inserted into `__(1)__`? (Choose two.)**
 
 *A:*
+
 ```ruby
 [:push, :pop].each do |name|
   define_method(name) do |*args|
@@ -34,6 +35,7 @@ end
 ```
 
 *B:*
+
 ```ruby
 for name in [:push, :pop]
   define_method(name) do |*args|
@@ -43,6 +45,7 @@ end
 ```
 
 *C:*
+
 ```ruby
 [:push, :pop].each do |name|
   instance_eval(<<-EOF)
@@ -54,6 +57,7 @@ end
 ```
 
 *D:*
+
 ```ruby
 [:push, :pop].each do |name|
   class_eval(<<-EOF)
@@ -495,6 +499,7 @@ print reader_method("foo")
 **Which option corresponds to the execution result? (Choose one.)**
 
 *A:*
+
 ```ruby
     def foo
       @foo
@@ -502,6 +507,7 @@ print reader_method("foo")
 ```
 
 *B:*
+
 ```ruby
   def foo
     @foo
@@ -509,6 +515,7 @@ print reader_method("foo")
 ```
 
 *C:*
+
 ```ruby
 def foo
   @foo
@@ -716,6 +723,7 @@ p c
 ```
 
 *A:*
+
 ```ruby
 def fx(*args)
   p(args)
@@ -724,6 +732,7 @@ fx(*["apple", "banana", "carrot"])
 ```
 
 *B:*
+
 ```ruby
 def fx(*args)
   p(args)
@@ -732,6 +741,7 @@ fx(["apple", "banana", "carrot"])
 ```
 
 *C:*
+
 ```ruby
 def fx(*args)
   p(args)
@@ -740,6 +750,7 @@ fx("apple", "banana", "carrot")
 ```
 
 *D:*
+
 ```ruby
 def fx(*args)
   p(*args)
@@ -784,12 +795,14 @@ fx(b: "banana")
 **Which option corresponds to the execution result?**
 
 *A:*
+
 ```ruby
 nil
 apple
 ```
 
 *B:*
+
 ```ruby
 nil
 banana
@@ -1014,26 +1027,31 @@ end
 **Which option corresponds to the execution result? (Choose one.)**
 
 *A:*
+
 ```ruby
 Bare rescue
 ```
 
 *B:* 
+
 ```ruby
 StandardError rescue
 ```
 
 *C:* 
+
 ```ruby
 AnError rescue
 ```
 
 *D:* 
+
 ```ruby
 Exception rescue
 ```
 
 *E:*
+
 ```ruby
 AnError rescue
 Exception rescue
@@ -1062,26 +1080,31 @@ end
 **Which option corresponds to the execution result? (Choose one.)**
 
 *A:*
+
 ```ruby
 Bare rescue
 ```
 
 *B:* 
+
 ```ruby
 StandardError rescue
 ```
 
 *C:* 
+
 ```ruby
 AnError rescue
 ```
 
 *D:* 
+
 ```ruby
 Exception rescue
 ```
 
 *E:*
+
 ```ruby
 Exception rescue
 AnError rescue
@@ -1223,18 +1246,21 @@ true
 ```
 
 *B:*
+
 ```ruby
 true
 false
 ```
 
 *C:*
+
 ```ruby
 false
 true
 ```
 
 *D:*
+
 ```ruby
 false
 false
@@ -1262,24 +1288,28 @@ p Identity.new.this_object.class
 **Which option corresponds to the execution result? (Choose one.)**
 
 *A:*
+
 ```ruby
 Identity
 Identity
 ```
 
 *B:*
+
 ```ruby
 Class
 Identity
 ```
 
 *C:*
+
 ```ruby
 Object
 Identity
 ```
 
 *D:*
+
 ```ruby
 Class
 Object

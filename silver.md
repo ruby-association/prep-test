@@ -125,6 +125,7 @@ A syntax error occurs
 An exception is raised
 
 *(c)*
+
 ```ruby
 banana
 carrot
@@ -133,6 +134,7 @@ daikon
 ```
 
 *(d)*
+
 ```ruby
 banana
 carrot
@@ -248,18 +250,21 @@ end
 **Which is the correct result? (Choose one.)**
 
 *(a)*
+
 ```ruby
 0
 100
 ```
 
 *(b)*
+
 ```ruby
 nil
 100
 ```
 
 *(c)*
+
 ```ruby
 false
 100
@@ -379,24 +384,28 @@ p y
 
 
 *(a)*
+
 ```ruby
 [1, 3, 5, 7]
 [1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
 *(b)*
+
 ```ruby
 [1, 2, 3, 4, 5, 6, 7, 8]
 [1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
 *(c)*
+
 ```ruby
 [1, 3, 5, 7]
 [1, 3, 5, 7]
 ```
 
 *(d)*
+
 ```ruby
 [1, 3, 5, 7]
 [2, 4, 6, 8]
