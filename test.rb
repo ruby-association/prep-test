@@ -18,6 +18,7 @@ class Test
           i.ord - "a".ord
         }
       end
+      @test_symbol = "a"
     when :gold
       @questions = File.read("gold.md").split(/^-------------.*\n/)
       @answers = File.read("gold_answers.md").split(/^-------------.*\n/)[0..49]
@@ -26,6 +27,7 @@ class Test
           i.ord - ?A.ord
         }
       end
+      @test_symbol = "A"
     else
       raise StandardError, "test not found"
     end
@@ -85,7 +87,7 @@ class Test
     user_answer = gets
     raise Exit if user_answer.match? /exit/i
 
-    user_answer.strip.split(",").map { |e| e.ord - "a".ord }
+    user_answer.strip.split(",").map { |e| e.ord - @test_symbol.ord }
   end
 
   def clean_the_screen
