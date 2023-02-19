@@ -1,6 +1,6 @@
 require "tty-markdown"
 require "timeout"
-require 'byebug'
+require "byebug"
 
 class Test
   attr_reader :questions, :answers, :howto
@@ -14,8 +14,8 @@ class Test
   def initialize(type: :silver, language: :en)
     case type
     when :silver
-      @questions = File.read("silver#{language == :en ? "" : "_ja" }.md").split(/^-------------.*\n/)
-      @answers = File.read("silver_answers#{language == :en ? "" : "_ja" }.md").split(/^-------------.*\n/)
+      @questions = File.read("silver#{(language == :en) ? "" : "_ja"}.md").split(/^-------------.*\n/)
+      @answers = File.read("silver_answers#{(language == :en) ? "" : "_ja"}.md").split(/^-------------.*\n/)
       @answers.map! do |ans|
         ans.slice(/^\*\*A\d+:.*/).scan(/\(([a-z])\)/).flatten(1).map { |i|
           i.ord - "a".ord
@@ -23,8 +23,8 @@ class Test
       end
       @test_symbol = "a"
     when :gold
-      @questions = File.read("gold#{language == :en ? "" : "_ja" }.md").split(/^-------------.*\n/)
-      @answers = File.read("gold_answers#{language == :en ? "" : "_ja" }.md").split(/^-------------.*\n/)[0..49]
+      @questions = File.read("gold#{(language == :en) ? "" : "_ja"}.md").split(/^-------------.*\n/)
+      @answers = File.read("gold_answers#{(language == :en) ? "" : "_ja"}.md").split(/^-------------.*\n/)[0..49]
       @answers.map! do |ans|
         ans.slice(/^\*\*A\d+:.*/).scan(/\(([A-Z])\)/).flatten(1).map { |i|
           i.ord - "A".ord
@@ -103,7 +103,7 @@ class Test
   def get_user_input
     puts "**Write you answers separated by commas:**"
     user_answer = gets.chomp
-    input = case user_answer
+    case user_answer
     in /exit/i
       puts "**Are you sure want finish exam? (Enter `yes` to exit)**"
       raise Exit if gets.match?(/yes/i)
@@ -114,8 +114,8 @@ class Test
     in /\A(p|previous|prev\z)/i
       :prev
     in /\Agoto (\d+)\z/
-      return :repeat unless $1.to_i.between?(1,50)
-      
+      return :repeat unless $1.to_i.between?(1, 50)
+
       @curr_inx = $1.to_i - 1
       :repeat
     in /\A(stop|finish|end\z)/i
@@ -139,10 +139,9 @@ class Test
       :repeat
     in /\Ahowto\z/i
       :howto
-    else 
+    else
       user_answer.strip.split(",").map { |e| e.ord - @test_symbol.ord }
     end
-    input
   end
 
   def calc_and_print_result(result)
@@ -160,12 +159,12 @@ class Test
 
   def print_howto
     puts howto.to_s
-    unless @exam_started
-      puts "## To start the test enter `y`"
-      raise Exit unless gets.chomp.match?(/\Ay\z/)
-    else
+    if @exam_started
       puts "**Press enter to continue**"
       gets
+    else
+      puts "## To start the test enter `y`"
+      raise Exit unless gets.chomp.match?(/\Ay\z/)
     end
   end
 
