@@ -1,6 +1,5 @@
 require "tty-markdown"
 require "timeout"
-require "byebug"
 
 class Test
   attr_reader :questions, :answers, :howto
@@ -14,8 +13,8 @@ class Test
   def initialize(type: :silver, language: :en)
     case type
     when :silver
-      @questions = File.read("silver#{(language == :en) ? "" : "_ja"}.md").split(/^-------------.*\n/)
-      @answers = File.read("silver_answers#{(language == :en) ? "" : "_ja"}.md").split(/^-------------.*\n/)
+      @questions = File.read("silver#{(language == :en) ? "" : "_ja"}.md").split(/^-------------.*\n/)[0..49]
+      @answers = File.read("silver_answers#{(language == :en) ? "" : "_ja"}.md").split(/^-------------.*\n/)[0..49]
       @answers.map! do |ans|
         ans.slice(/^\*\*A\d+:.*/).scan(/\(([a-z])\)/).flatten(1).map { |i|
           i.ord - "a".ord
@@ -23,7 +22,7 @@ class Test
       end
       @test_symbol = "a"
     when :gold
-      @questions = File.read("gold#{(language == :en) ? "" : "_ja"}.md").split(/^-------------.*\n/)
+      @questions = File.read("gold#{(language == :en) ? "" : "_ja"}.md").split(/^-------------.*\n/)[0..49]
       @answers = File.read("gold_answers#{(language == :en) ? "" : "_ja"}.md").split(/^-------------.*\n/)[0..49]
       @answers.map! do |ans|
         ans.slice(/^\*\*A\d+:.*/).scan(/\(([A-Z])\)/).flatten(1).map { |i|
