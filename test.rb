@@ -178,7 +178,7 @@ class Test
 end
 
 test_type = ARGV[0]&.to_sym || :silver
-test_language = ARGV[1]&.to_sym == "ja" && :ja || :en
+test_language = ARGV[1]&.to_sym || :en
 
 ARGV.clear
 if test_type.match?("help")
