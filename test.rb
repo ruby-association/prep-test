@@ -11,11 +11,11 @@ class Test
 
   class EndOfTime < StandardError; end
 
-  def initialize(type: :silver)
+  def initialize(type: :silver, language: :en)
     case type
     when :silver
-      @questions = File.read("silver.md").split(/^-------------.*\n/)
-      @answers = File.read("silver_answers.md").split(/^-------------.*\n/)
+      @questions = File.read("silver#{language == :en ? "" : "_ja" }.md").split(/^-------------.*\n/)
+      @answers = File.read("silver_answers#{language == :en ? "" : "_ja" }.md").split(/^-------------.*\n/)
       @answers.map! do |ans|
         ans.slice(/^\*\*A\d+:.*/).scan(/\(([a-z])\)/).flatten(1).map { |i|
           i.ord - "a".ord
@@ -23,8 +23,8 @@ class Test
       end
       @test_symbol = "a"
     when :gold
-      @questions = File.read("gold.md").split(/^-------------.*\n/)
-      @answers = File.read("gold_answers.md").split(/^-------------.*\n/)[0..49]
+      @questions = File.read("gold#{language == :en ? "" : "_ja" }.md").split(/^-------------.*\n/)
+      @answers = File.read("gold_answers#{language == :en ? "" : "_ja" }.md").split(/^-------------.*\n/)[0..49]
       @answers.map! do |ans|
         ans.slice(/^\*\*A\d+:.*/).scan(/\(([A-Z])\)/).flatten(1).map { |i|
           i.ord - "A".ord
@@ -179,10 +179,12 @@ class Test
 end
 
 test_type = ARGV[0]&.to_sym || :silver
+test_language = ARGV[1]&.to_sym == "ja" && :ja || :en
+
 ARGV.clear
 if test_type.match?("help")
   puts TTY::Markdown.parse(File.read("test_help.md")).to_s
 else
-  test = Test.new(type: test_type)
+  test = Test.new(type: test_type, language: test_language)
   test.start
 end
