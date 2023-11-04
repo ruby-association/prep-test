@@ -287,8 +287,6 @@ ScriptError < Exception
 
 **A37:** (B)
 
-In class methods, `self` refers to an instance of the `Class` object.
-In instance methods, `self` refers to whatever the currently instantiated object is.
 クラスメソッドでは、`self`は`Class`インスタンスを参照します。
 インスタンスメソッドでは、`self`は現在インスタンス化されているオブジェクトを参照します。
 
