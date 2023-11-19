@@ -4,7 +4,7 @@
 
 **Q1. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 class Stack
   def initialize
     @contents = []
@@ -25,7 +25,8 @@ p stack.pop
 **__(1)__に入る適切な記述を選択してください。(2つ選択)**
 
 *A:*
-```
+
+```ruby
 [:push, :pop].each do |name|
   define_method(name) do |*args|
     @contents.send(name, *args)
@@ -34,7 +35,8 @@ end
 ```
 
 *B:*
-```
+
+```ruby
 for name in [:push, :pop]
   define_method(name) do |*args|
     @contents.send(name, *args)
@@ -43,7 +45,8 @@ end
 ```
 
 *C:*
-```
+
+```ruby
 [:push, :pop].each do |name|
   instance_eval(<<-EOF)
     def #{name}(*args)
@@ -54,7 +57,8 @@ end
 ```
 
 *D:*
-```
+
+```ruby
 [:push, :pop].each do |name|
   class_eval(<<-EOF)
     def #{name}(*args)
@@ -68,7 +72,7 @@ end
 
 **Q2. 以下のコードがあります。**
 
-```
+```ruby
 module I
 end
 
@@ -97,7 +101,7 @@ p C.ancestors
 
 **Q3. 以下の実行結果を出力するコードがあります。** 
 
-```
+```ruby
 x = __(1)__
 p x + 1
 
@@ -119,7 +123,7 @@ p x + 1
 
 **Q4. 以下の実行結果を出力するコードがあります。** 
 
-```
+```ruby
 p ("aaaaaa".."zzzzzz").lazy.select { |e| e.end_with?("f") }.__(1)__
 
 [実行結果]
@@ -140,7 +144,7 @@ p ("aaaaaa".."zzzzzz").lazy.select { |e| e.end_with?("f") }.__(1)__
 
 **Q5. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 def round(n, __(1)__)
   n.round(__(1)__)
 end
@@ -165,7 +169,7 @@ p round(2.5, half: :even)
 
 **Q6. 以下のコードがあります。**
 
-```
+```ruby
 class A
   def foo
     self.bar
@@ -188,12 +192,14 @@ puts A.new.foo
 **実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:*
-```
+
+```ruby
 baz
 ```
 
 *B:*
-```
+
+```ruby
 quux
 ```
 
@@ -207,7 +213,7 @@ quux
 
 **Q7. 以下の実行結果を出力するコードがあります。** 
 
-```
+```ruby
 class Greeter
   class << self
     def hello
@@ -236,7 +242,7 @@ Hello there!
 
 **Q8: 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 __(1)__
 
 p multiply_by(4) { 2 + 3 }
@@ -249,7 +255,7 @@ p multiply_by(4) { 2 + 3 }
 
 *A:*
 
-```
+```ruby
 def multiply_by(n, &block)
   n * block.call
 end
@@ -257,7 +263,7 @@ end
 
 *B:*
 
-```
+```ruby
 def multiply_by(n, &block)
   n * block
 end
@@ -265,7 +271,7 @@ end
 
 *C:*
 
-```
+```ruby
 def multiply_by(n)
   n * yield
 end
@@ -273,7 +279,7 @@ end
 
 *D:*
 
-```
+```ruby
 def multiply_by(n)
   n * yield.call
 end
@@ -283,7 +289,7 @@ end
 
 **Q9: 以下の実行結果を出力するコードがあります。** 
 
-```
+```ruby
 __(1)__
 
 p sum { |e| e << 1 << 5 << 7 }
@@ -296,7 +302,7 @@ p sum { |e| e << 1 << 5 << 7 }
 
 *A:*
 
-```
+```ruby
 def sum(&block)
   array = []
   
@@ -307,7 +313,8 @@ end
 ```
 
 *B:*
-```
+
+```ruby
 def sum(&block)
   array = []
   
@@ -318,7 +325,8 @@ end
 ```
 
 *C:*
-```
+
+```ruby
 def sum
   array = []
   
@@ -329,7 +337,8 @@ end
 ```
 
 *D:*
-```
+
+```ruby
 def sum
   array = []
   
@@ -343,7 +352,7 @@ end
 
 **Q10. 以下のコードがあります。** 
 
-```
+```ruby
 class A
   @@x = 1
 end
@@ -378,7 +387,7 @@ p B.x
 
 **Q11. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 words = ["apple", "banana", "cabbage"]
 pop = Proc.new { words.pop }
 3.times{ puts __(1)__ }
@@ -405,7 +414,7 @@ apple
 
 **Q12. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 words = ["apple", "banana", "cabbage"]
 pop = __(1)__{ words.pop }
 3.times{ puts pop.call }
@@ -430,7 +439,7 @@ apple
 
 **Q13. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 add = __(1)__
 puts add.call("hello")
 
@@ -452,7 +461,7 @@ HELLO
 
 **Q14. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 __(1)__
   x + y
 end
@@ -477,7 +486,7 @@ p add(1, 2)
 
 **Q15. 以下のコードがあります。**
 
-```
+```ruby
 def reader_method(s)
   <<~EOF
     def #{s}
@@ -492,21 +501,24 @@ print reader_method("foo")
 **実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:*
-```
+
+```ruby
     def foo
       @foo
     end
 ```
 
 *B:*
-```
+
+```ruby
   def foo
     @foo
   end
 ```
 
 *C:*
-```
+
+```ruby
 def foo
   @foo
 end
@@ -519,7 +531,7 @@ end
 
 **Q16. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 obj = Object.new
 
 def obj.hello
@@ -548,7 +560,7 @@ Hi!
 
 **Q17. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 class ShoppingList
   def initialize
     @items = []
@@ -591,7 +603,7 @@ puts list
 
 **Q18. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 class ShoppingList
   def initialize
     @items = []
@@ -633,7 +645,7 @@ ShoppingList:
 
 **Q19. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 p __(1)__.flat_map {|z|
   (1..z).flat_map {|x|
     (x..z).select {|y|
@@ -662,7 +674,7 @@ p __(1)__.flat_map {|z|
 
 **Q20. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 ary = ["foo", "bar", nil, "baz"]
 
 p ary.__(1)__ { |i|
@@ -687,7 +699,7 @@ p ary.__(1)__ { |i|
 
 **Q21. 以下のコードがあります。**
 
-```
+```ruby
 a, b, *c = ["apple", "banana", "carrot", "daikon"]
 
 p c
@@ -707,13 +719,14 @@ p c
 
 **Q22: 以下の実行結果を出力するコードを選択してください。(1つ選択)**
 
-```
+```ruby
 [実行結果]
 [["apple", "banana", "carrot"]]
 ```
 
 *A:*
-```
+
+```ruby
 def fx(*args)
   p(args)
 end
@@ -721,7 +734,8 @@ fx(*["apple", "banana", "carrot"])
 ```
 
 *B:*
-```
+
+```ruby
 def fx(*args)
   p(args)
 end
@@ -729,7 +743,8 @@ fx(["apple", "banana", "carrot"])
 ```
 
 *C:*
-```
+
+```ruby
 def fx(*args)
   p(args)
 end
@@ -737,7 +752,8 @@ fx("apple", "banana", "carrot")
 ```
 
 *D:*
-```
+
+```ruby
 def fx(*args)
   p(*args)
 end
@@ -748,7 +764,7 @@ fx(["apple", "banana", "carrot"])
 
 **Q23. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 p ["foo", "bar", "baz"].map { __(1)__.upcase }
 
 [実行結果]
@@ -769,7 +785,7 @@ p ["foo", "bar", "baz"].map { __(1)__.upcase }
 
 **Q24. 以下のコードがあります。**
 
-```
+```ruby
 def fx(a:, b: "apple")
   p a
   p b
@@ -781,13 +797,15 @@ fx(b: "banana")
 **実行結果として正しいものを選択してください。**
 
 *A:*
-```
+
+```ruby
 nil
 apple
 ```
 
 *B:*
-```
+
+```ruby
 nil
 banana
 ```
@@ -802,7 +820,7 @@ banana
 
 **Q25. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 def add(x:, y:, **params)
   z = x + y
 
@@ -831,7 +849,7 @@ __(1)__
 
 **Q26: 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 class Speaker
   @message = "Hello!"
 
@@ -864,7 +882,7 @@ Hello!
 
 **Q27. 以下のコードがあります。**
 
-```
+```ruby
 class Speaker
   @message = "Hello!"
 
@@ -892,7 +910,7 @@ end
 
 **Q28. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 def x
   puts "x"
 end
@@ -935,7 +953,7 @@ done!
 
 **Q29. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 letters = catch(:done) do
   ("a".."z").each do |a|
     ("a".."z").each do |b|
@@ -967,7 +985,7 @@ abc
 
 **Q30. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 begin
   __(1)__
 rescue
@@ -992,7 +1010,7 @@ OK
 
 **Q31. 以下のコードがあります。**
 
-```
+```ruby
 AnError = Class.new(Exception)
 
 begin
@@ -1011,27 +1029,32 @@ end
 **実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:*
-```
+
+```ruby
 Bare rescue
 ```
 
 *B:* 
-```
+
+```ruby
 StandardError rescue
 ```
 
 *C:* 
-```
+
+```ruby
 AnError rescue
 ```
 
 *D:* 
-```
+
+```ruby
 Exception rescue
 ```
 
 *E:*
-```
+
+```ruby
 AnError rescue
 Exception rescue
 ```
@@ -1040,7 +1063,7 @@ Exception rescue
 
 **Q32. 以下のコードがあります。**
 
-```
+```ruby
 AnError = Class.new(Exception)
 
 begin
@@ -1059,27 +1082,32 @@ end
 **実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:*
-```
+
+```ruby
 Bare rescue
 ```
 
 *B:* 
-```
+
+```ruby
 StandardError rescue
 ```
 
 *C:* 
-```
+
+```ruby
 AnError rescue
 ```
 
 *D:* 
-```
+
+```ruby
 Exception rescue
 ```
 
 *E:*
-```
+
+```ruby
 Exception rescue
 AnError rescue
 ```
@@ -1088,7 +1116,7 @@ AnError rescue
 
 **Q33. 以下のコードがあります。**
 
-```
+```ruby
 begin
   "hello".world
 rescue => ex
@@ -1112,7 +1140,7 @@ end
 
 **Q34. 以下のコードがあります。**
 
-```
+```ruby
 CustomError = Class.new(StandardError)
 
 def boom
@@ -1144,7 +1172,7 @@ end
 
 **Q35. 以下のコードがあります。**
 
-```
+```ruby
 def greeting
   "hello"
 ensure
@@ -1160,27 +1188,27 @@ puts greeting
 
 *A:*
 
-```
+```ruby
 hello
 ```
 
 *B:*
 
-```
+```ruby
 hi
 ```
 
 
 *C:*
 
-```
+```ruby
 Ensure called!
 hello
 ```
 
 *D:*
 
-```
+```ruby
 Ensure called!
 hi
 ```
@@ -1189,7 +1217,7 @@ hi
 
 **Q36. 以下のコードがあります。**
 
-```
+```ruby
 class Identity
   def self.this_object
     self
@@ -1214,25 +1242,28 @@ p c == d
 
 *A:* 
 
-```
+```ruby
 true
 true
 ```
 
 *B:*
-```
+
+```ruby
 true
 false
 ```
 
 *C:*
-```
+
+```ruby
 false
 true
 ```
 
 *D:*
-```
+
+```ruby
 false
 false
 ```
@@ -1241,7 +1272,7 @@ false
 
 **Q37. 以下のコードがあります。**
 
-```
+```ruby
 class Identity
   def self.this_object
     self.class
@@ -1259,25 +1290,29 @@ p Identity.new.this_object.class
 **実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:*
-```
+
+```ruby
 Identity
 Identity
 ```
 
 *B:*
-```
+
+```ruby
 Class
 Identity
 ```
 
 *C:*
-```
+
+```ruby
 Object
 Identity
 ```
 
 *D:*
-```
+
+```ruby
 Class
 Object
 ```
@@ -1286,7 +1321,7 @@ Object
 
 **Q38. 以下のコードがあります。**
 
-```
+```ruby
 module Mixin
   def this_object
     self
@@ -1327,7 +1362,7 @@ p Identity.new.this_object.class
 
 **Q40. 以下のコードがあります。**
 
-```
+```ruby
 module Mixin
   def self.greet
     puts "Hello World!"
@@ -1353,7 +1388,7 @@ end
 
 **Q41. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 module Mixin
   def greet
     puts "Hello World!"
@@ -1384,7 +1419,7 @@ Hello World!
 
 **Q42. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 module Mixin
   def greet
     puts "Hello World!"
@@ -1415,7 +1450,7 @@ Hello World!
 
 **Q43. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 class BaseClass
   private
 
@@ -1439,19 +1474,19 @@ Hello World!
 
 *A:* 
 
-```
+```ruby
 public :greet
 ```
 
 *B:*
 
-```
+```ruby
 protected :greet
 ```
 
 *C:*
 
-```
+```ruby
 def greet
   super
 end
@@ -1459,7 +1494,7 @@ end
 
 *D:*
 
-```
+```ruby
 alias_method :original_greet, :greet
 
 def greet
@@ -1471,7 +1506,7 @@ end
 
 **Q44. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 h = [1, 2, 3]
 case h
 __(1)__ [x, y]
@@ -1498,7 +1533,7 @@ end
 
 **Q45. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 class Alphabet
   include Enumerable
 
@@ -1539,7 +1574,7 @@ p set.select { |e| e > "W" }
 
 **Q46. 以下のコードがあります。**
 
-```
+```ruby
 class TShirt
   SIZES = [:xs, :s, :m, :l, :xl, :xxl]
 
@@ -1569,7 +1604,7 @@ p medium >= large
 
 *A:*
 
-```
+```ruby
 true
 false
 true
@@ -1578,7 +1613,8 @@ true
 ```
 
 *B:*
-```
+
+```ruby
 false
 true
 true
@@ -1587,7 +1623,8 @@ false
 ```
 
 *C:*
-```
+
+```ruby
 false
 false
 false
@@ -1596,7 +1633,8 @@ true
 ```
 
 *D:*
-```
+
+```ruby
 false
 false
 false
@@ -1611,7 +1649,7 @@ false
 
 **Q47. 以下のコードがあります。**
 
-```
+```ruby
 require "date"
 
 date = Date.new(2000, 2, 24)
@@ -1623,25 +1661,29 @@ puts(date >> 12)
 **実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:*
-```
+
+```ruby
 2000-02-12
 2000-03-07
 ```
 
 *B:*
-```
+
+```ruby
 2000-03-07
 2000-02-12
 ```
 
 *C:*
-```
+
+```ruby
 1999-02-24
 2001-02-24
 ```
 
 *D:*
-```
+
+```ruby
 1988-02-24
 2012-02-24
 ```
@@ -1650,7 +1692,7 @@ puts(date >> 12)
 
 **Q48. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 require "time"
 
 t = Time.__(1)__("00000024021993", "%S%M%H%d%m%Y")
@@ -1674,7 +1716,7 @@ puts t.iso8601
 
 **Q49. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 require "singleton"
 
 class Foo
@@ -1703,7 +1745,7 @@ true
 
 **Q50. 以下の実行結果を出力するコードがあります。**
 
-```
+```ruby
 require 'forwardable'
 
 class List
