@@ -9,7 +9,7 @@ logically false, all other objects are treated as logically true.
 
 **A2:** (c) and (e)
 
-The complete list of reserved words as of Ruby 2.1 is listed below:
+The complete list of reserved words as of Ruby 3.1 is listed below:
 
 ![Ruby keywords](ruby-keywords.png)
 
@@ -17,7 +17,7 @@ The complete list of reserved words as of Ruby 2.1 is listed below:
 
 **A3:** (c)
 
-Ruby variable names must begin with a lowercase letter or underscore, and may contain only letters, numbers, and underscore characters.
+Ruby variable names must begin with a lowercase letter or underscore, and may contain only letters, numbers, underscore, and non-ASCII characters.
 
 Variable names must not conflict with keywords (e.g. you cannot have a variable called `class`), but unambiguous names that contain reserved words are acceptable (i.e. both `classy` and `_class` are valid Ruby variable names)
 
@@ -74,27 +74,38 @@ Although block variables with the same name of local variables from the surround
 
 ---------------------------------------------------------------------------
 
-**A10:** (c), (d)
+**A10:** (d)
 
-The encoding _magic comment_ must appear as the first line of the file, unless a UNIX shebang line is present (in that case, the encoding line would be placed on the second line).
+[String#each_char](https://docs.ruby-lang.org/en/3.1/String.html#method-i-each_char) returns an [Enumerator](https://docs.ruby-lang.org/en/3.1/Enumerator.html) which yields each character in the receiver. Note that characters are represented by single character strings.
 
-Both `coding: ...` and `encoding: ...` may be used to set the source file's encoding, and they work identically.
+[Enumerable#map](https://docs.ruby-lang.org/en/3.1/Enumerable.html#method-i-map) returns an array of objects returned by the given block.
 
-Setting the encoding for a source file affects only the contents of that file. In other words, it applies to things like string literals in the file, but does not automatically set encoding for things like reading from and to other files.
+`string * integer` returns a string containing `integer` copies of `string`.
 
-If no encoding comment is present in a file, the default encoding is set to UTF-8.
+Therefore, `s.each_char.map { |i| i * 2}` evaluates to `["aa", "bb", "cc", "dd", "ee"]`.
 
 ---------------------------------------------------------------------------
 
 **A11:** (c)
 
-`String#encoding` returns an `Encoding` object which also provides some other helpful methods (e.g. `Encoding#ascii_compatible?`)
+[String#chars](https://docs.ruby-lang.org/en/3.1/String.html#method-i-chars) returns an array of characters in the receiver. Note that characters are represented by single character strings.
+
+[Enumerable#tally](https://docs.ruby-lang.org/en/3.1/Enumerable.html#method-i-tally) returns a hash containing the counts of equal elements.
+
+Therefore, `"cocoa".chars.tally` evaluates to `{"c"=>2, "o"=>2, "a"=>1}`.
 
 ---------------------------------------------------------------------------
 
 **A12:** (b)
 
-When a `coding:` comment is omitted, Ruby will use UTF-8 by default for its source encoding.
+[String#gsub](https://docs.ruby-lang.org/en/3.1/String.html#method-i-gsub) returns a copy of the receiver with all occurrences of the given pattern replaced.
+
+
+[String#sub](https://docs.ruby-lang.org/en/3.1/String.html#method-i-sub) returns a copy of the receiver with only the first occurrence of the given pattern replaced.
+
+[String#replace](https://docs.ruby-lang.org/en/3.1/String.html#method-i-replace) replaces the contents of the receiver with the contents of the given string.
+
+String does not have `#replace_all` method.
 
 ---------------------------------------------------------------------------
 
@@ -104,19 +115,26 @@ In an `if/elsif/else` conditional statement, the first matching `if` or `elsif` 
 
 ---------------------------------------------------------------------------
 
-**A14.** (c)
+**A14:** (b)
 
-When none of the `if` and `elsif` clauses of a conditional statement match, the `else` branch is run.
-
----------------------------------------------------------------------------
-
-**A15: (d)**
-
-Nearly every programming language has some sort of `if/elsif/else` structure, but they vary in the name they choose for `elsif`. This can be a source of confusion if you're coming to Ruby from another language, and the only solution is to memorize the specific term used in each language.
+[String#slice](https://docs.ruby-lang.org/en/3.1/String.html#method-i-slice) returns the first matching substring found in the receiver, or `nil` if none found.
+`&.` is called [safe nagivation operator](https://docs.ruby-lang.org/en/3.1/syntax/calling_methods_rdoc.html#label-Safe+Navigation+Operator). `x&.foo` invokes `foo` on `x` if `x` is not `nil`. If `x` is `nil`, `x&.foo` does not invoke `foo` and evaluates to `nil`.
 
 ---------------------------------------------------------------------------
 
-**A16: (a) and (c)**
+**A15: (b)**
+
+If any [keyword arguments](https://docs.ruby-lang.org/en/3.1/syntax/calling_methods_rdoc.html#label-Keyword+Arguments) are not given, the default value from the method definition will be used.
+
+---------------------------------------------------------------------------
+
+**A16: (b)**
+
+`**` turns a Hash into [keyword arguments](https://docs.ruby-lang.org/en/3.1/syntax/calling_methods_rdoc.html#label-Keyword+Arguments).
+
+---------------------------------------------------------------------------
+
+**A17: (a) and (c)**
 
 Character classes (`[...]`) match any single character from within the brackets.
 
@@ -128,20 +146,6 @@ _Note that the reason that (b) is not a correct answer is because its subexpress
 
 ---------------------------------------------------------------------------
 
-**A17: (b)**
-
-The expression `/\A[a-z][a-z]*\z/` could be described in words as "A string which begins with a lowercase letter, followed by zero or more additional lowercase letters and nothing else."
-
-Here are some additional notes for understanding the other patterns in this question:
-
-- The `*` quantifier matches a subexpression zero or more times.
-- The `.` quantifier matches any character except a newline.
-- The `^` inverts a character class, causing it to match anything except the named chars.
-
-(see `A16` for a recap of other features that were already covered in that question)
-
----------------------------------------------------------------------------
-
 **A18: (d)**
 
 Constants can be redefined, but because this is usually a bad practice, a warning is displayed.
@@ -150,7 +154,7 @@ Because Ruby also uses constants for referencing module and class names, the con
 
 ---------------------------------------------------------------------------
 
-**A19. (b)**
+**A19: (b)**
 
 No warning is shown because the constant is not being redefined; instead the object it references is being modified.
 
@@ -166,7 +170,7 @@ Some notes on Ruby variable naming rules:
 - Class variables start with `@@`.
 - Instance variables start with `@`.
 - Local variables must begin with a lowercase letter or an underscore.
-- The remaining characters in any variable type are limited to letters, numbers, and underscores.
+- The remaining characters in any variable type are limited to letters, numbers, underscores, and non-ASCII characters.
 
 ---------------------------------------------------------------------------
 
@@ -229,11 +233,10 @@ To clarify, here is a list of the index values for each position in the array fr
 
 ---------------------------------------------------------------------------
 
-**A26: (d)**
+**A26: (b) and (d)**
 
-`Array#join` returns a string that is created by converting each element 
-in an array to a string and then combining them together with the 
-specified separator.
+`Array#select` and `Array#filter` return elements for which the given block
+returns a truthy value.
 
 ---------------------------------------------------------------------------
 
@@ -273,15 +276,17 @@ The `|` operator is equivalent to a set union. It returns a new array that is bu
 
 **A31: (d)**
 
-The `&` operator is equivalent to a set intersection. It returns a new array that is made up of elements found in both arrays it operates on, while preserving order and eliminating duplicates.
+`%i(...)` is an non-interpolated array of symbols, separated by whitespace.
+
+See [documentation of percent literals](https://docs.ruby-lang.org/en/3.1/syntax/literals_rdoc.html#label-Percent+Literals) for details.
 
 ---------------------------------------------------------------------------
 
 **A32: (b)**
 
-In a `begin/rescue/end` block... the first matched `rescue` statement will be executed.
+In a `begin/rescue/end` block... the first matched `rescue` clause will be executed.
 
-Because `SomeOtherError` is a subclass of `SomeError`, it matches the `rescue SomeError` statement, and so that branch is what gets run.
+Because `SomeOtherError` is a subclass of `SomeError`, it matches the `rescue SomeError` clause, and so that branch is what gets run.
 
 In a real application, it is usually a good practice to attempt to match more specific errors before the more general errors that they inherit from (e.g. `rescue StandardError` would usually come last).
 
@@ -335,13 +340,13 @@ In this particular example, calling `Bar.new` causes `Bar#initialize` to run, wh
 
 ---------------------------------------------------------------------------
 
-**A39: (c)**
+**A39: (d)**
 
-`Array#delete` removes all elements from an array that are equal to the specified value.
+[String#delete_prefix](https://docs.ruby-lang.org/en/3.1/String.html#method-i-delete_prefix) returns a copy of the receiver with a given prefix deleted.
 
-For deleting a value at a particular index, see documentation for `Array#delete_at`.
+`"$foo$".delete("$")` evaluates to `"foo"` because [String#delete](https://docs.ruby-lang.org/en/3.1/String.html#method-i-delete) returns a copy of the receiver with all characters specified by its arguments deleted.
 
-For deleting values based on a condition, see documentation for  `Array#delete_if` (an alias for `reject!`).
+`sub("$")` and `chop("$")` raise ArgumentError because [String#sub](https://docs.ruby-lang.org/en/3.1/String.html#method-i-sub) takes two arguments and [String#chop](https://docs.ruby-lang.org/en/3.1/String.html#method-i-chop) takes no argument.
 
 ---------------------------------------------------------------------------
 
