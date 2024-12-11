@@ -62,7 +62,7 @@ So although both `1..120` and `120..170` include `120`, the `when 1..120` branch
 
 Although local variables from the surrounding scope are accessible within blocks, block parameters themselves are always block-local variables. This means that when a block parameter has the same name as a local variable from the surrounding scope, within the block any references will refer to the block-local variable. This prevents accidental modification of variables from the outside scope due to naming collisions.
 
-Defining block parameters with the same name as a local variable from the surrounding scope is considered an antipattern and may be a sign of an accidental programming error. To catch this problem, run `ruby` with the `-w` flag, and you will see warnings like `warning: shadowing outer local variable - item` wherever this problem occurs.
+Defining block parameters with the same name as a local variable from the surrounding scope is considered an antipattern and may be a sign of an accidental programming error. To catch this problem, use [Lint/ShadowingOuterLocalVariable](https://docs.rubocop.org/rubocop/cops_lint.html#lintshadowingouterlocalvariable) of [RuboCop](https://rubocop.org/).
 
 ---------------------------------------------------------------------------
 
