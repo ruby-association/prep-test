@@ -764,7 +764,7 @@ puts bar.var
 
 ---------------------------------------------------------------------------
 
-**Q39. Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose two.)**
+**Q39. Which of the following can be inserted into `__(1)__`  in order for the given code to generate the output below? (Choose one.)**
 
 ```
 puts "$foo$".__(1)__("$")
@@ -959,4 +959,3 @@ puts 5 * "hi"
 - (d) `"5*hi"`
 
 ---------------------------------------------------------------------------
-
