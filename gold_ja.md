@@ -1,8 +1,8 @@
-# Ruby Association Certified Ruby Examination Gold Sample Questions
+# Ruby技術者認定試験Gold模擬問題
 
-[Answers](gold_answers.md)
+[回答](gold_answers_ja.md)
 
-**Q1. Assume that the following code must have the stated execution result:** 
+**Q1. 以下の実行結果を出力するコードがあります。**
 
 ```
 class Stack
@@ -18,11 +18,11 @@ stack.push("foo")
 stack.push("bar")
 p stack.pop
 
-[Execution Result]
+[実行結果]
 "bar"
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose two.)**
+**__(1)__に入る適切な記述を選択してください。(2つ選択)**
 
 *A:*
 ```
@@ -66,7 +66,7 @@ end
 
 -----------------------------------------------------------------
 
-**Q2. Given the following code:**
+**Q2. 以下のコードがあります。**
 
 ```
 module I
@@ -83,7 +83,7 @@ end
 p C.ancestors
 ```
 
-**Which option corresponds to the execution result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:* `[P, C, I, Object, Kernel, BasicObject]`
 
@@ -95,17 +95,17 @@ p C.ancestors
 
 -----------------------------------------------------------------
 
-**Q3. Assume that the following code must have the stated execution result:** 
+**Q3. 以下の実行結果を出力するコードがあります。** 
 
 ```
 x = __(1)__
 p x + 1
 
-[Execution Result]
+[実行結果]
 (4/3)
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `1 / 3r`
 
@@ -117,16 +117,16 @@ p x + 1
 
 -----------------------------------------------------------------
 
-**Q4. Assume that the following code must have the stated execution result:** 
+**Q4. 以下の実行結果を出力するコードがあります。** 
 
 ```
 p ("aaaaaa".."zzzzzz").lazy.select { |e| e.end_with?("f") }.__(1)__
 
-[Execution Result]
+[実行結果]
 ["aaaaaf", "aaaabf", "aaaacf"]
 ```
 
-**Which of the following options can be inserted into `__(1)__`? (Choose all that apply.)**
+**__(1)__に入る適切な記述を選択してください。(複数選択)**
 
 *A:* `first(3)`
 
@@ -138,7 +138,7 @@ p ("aaaaaa".."zzzzzz").lazy.select { |e| e.end_with?("f") }.__(1)__
 
 -----------------------------------------------------------------
 
-**Q5. Assume that the following code must have the stated execution result:** 
+**Q5. 以下の実行結果を出力するコードがあります。**
 
 ```
 def round(n, __(1)__)
@@ -147,11 +147,11 @@ end
 
 p round(2.5, half: :even)
 
-[Execution Result]
+[実行結果]
 2
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose two.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `*`
 
@@ -163,7 +163,7 @@ p round(2.5, half: :even)
 
 -----------------------------------------------------------------
 
-**Q6. Given the following code:**
+**Q6. 以下のコードがあります。**
 
 ```
 class A
@@ -185,7 +185,7 @@ end
 puts A.new.foo
 ```
 
-**Which option corresponds to the execution result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:*
 ```
@@ -198,14 +198,14 @@ quux
 ```
 
 *C:*
-A syntax error occurs
+文法エラーが発生する
 
 *D:*
-An exception is raised
+例外が発生する
 
 -----------------------------------------------------------------
 
-**Q7. Assume that the following code must have the stated execution result.** 
+**Q7. 以下の実行結果を出力するコードがあります。** 
 
 ```
 class Greeter
@@ -218,11 +218,11 @@ end
 
 __(1)__
 
-[Execution Result]
+[実行結果]
 Hello there!
 ```
 
-**Which of the following options can be inserted into `__(1)__`? (Choose two.)**
+**__(1)__に入る適切な記述を選択してください。(2つ選択)**
 
 *A:* `Greeter.new.hello`
 
@@ -234,18 +234,18 @@ Hello there!
 
 ---------------------------------------------------------------
 
-**Q8: Assume that the following code must have the stated execution result.**
+**Q8: 以下の実行結果を出力するコードがあります。**
 
 ```
 __(1)__
 
 p multiply_by(4) { 2 + 3 }
 
-[Execution Result]
+[実行結果]
 20
 ```
 
-**Which of the following options can be inserted into `__(1)__`? (Choose two.)**
+**__(1)__に入る適切な記述を選択してください。(2つ選択)**
 
 *A:*
 
@@ -281,18 +281,18 @@ end
 
 -----------------------------------------------------------------
 
-**Q9: Assume that the following code must have the stated execution result.** 
+**Q9: 以下の実行結果を出力するコードがあります。** 
 
 ```
 __(1)__
 
 p sum { |e| e << 1 << 5 << 7 }
 
-[Execution Result]
+[実行結果]
 13
 ```
 
-**Which of the following options can be inserted into `__(1)__`? (Choose two.)**
+**__(1)__に入る適切な記述を選択してください。(2つ選択)**
 
 *A:*
 
@@ -341,7 +341,7 @@ end
 
 -----------------------------------------------------------------
 
-**Q10. Given the following code:** 
+**Q10. 以下のコードがあります。** 
 
 ```
 class A
@@ -364,7 +364,7 @@ C.inc
 p B.x
 ```
 
-**Which option corresponds to the execution result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 - *A:* `1`
 
@@ -372,24 +372,24 @@ p B.x
 
 - *C:* `3`
 
-- *D:* An exception is raised
+- *D:* 例外が発生する
 
 -----------------------------------------------------------------
 
-**Q11. Assume that the following code must have the stated execution result:**
+**Q11. 以下の実行結果を出力するコードがあります。**
 
 ```
 words = ["apple", "banana", "cabbage"]
 pop = Proc.new { words.pop }
 3.times{ puts __(1)__ }
 
-[Execution Result]
+[実行結果]
 cabbage
 banana
 apple
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `pop.load`
 
@@ -403,20 +403,20 @@ apple
 
 -----------------------------------------------------------------
 
-**Q12. Assume that the following code must have the stated execution result:**
+**Q12. 以下の実行結果を出力するコードがあります。**
 
 ```
 words = ["apple", "banana", "cabbage"]
 pop = __(1)__{ words.pop }
 3.times{ puts pop.call }
 
-[Execution Result]
+[実行結果]
 cabbage
 banana
 apple
 ```
 
-**Which of the following options can be inserted into `__(1)__`? (Choose two.)**
+**__(1)__に入る適切な記述を選択してください。(2つ選択)**
 
 *A:* `Proc.new`
 
@@ -428,17 +428,17 @@ apple
 
 -----------------------------------------------------------------
 
-**Q13. Assume that the following code must have the stated execution result.**
+**Q13. 以下の実行結果を出力するコードがあります。**
 
 ```
 add = __(1)__
 puts add.call("hello")
 
-[Execution Result]
+[実行結果]
 HELLO
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `->(e) { e.upcase }`
 
@@ -450,7 +450,7 @@ HELLO
 
 -----------------------------------------------------------------
 
-**Q14. Assume that the following code must have the stated execution result:**
+**Q14. 以下の実行結果を出力するコードがあります。**
 
 ```
 __(1)__
@@ -459,11 +459,11 @@ end
 
 p add(1, 2)
 
-[Execution Result]
+[実行結果]
 3
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `add = ->(x, y) do`
 
@@ -475,7 +475,7 @@ p add(1, 2)
 
 -----------------------------------------------------------------
 
-**Q15. Given the following code:**
+**Q15. 以下のコードがあります。**
 
 ```
 def reader_method(s)
@@ -489,7 +489,7 @@ end
 print reader_method("foo")
 ```
 
-**Which option corresponds to the execution result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:*
 ```
@@ -513,11 +513,11 @@ end
 ```
 
 *D:*
-A syntax error occurs.
+文法エラーが発生する
 
 -----------------------------------------------------------------
 
-**Q16. Assume that the following code must have the stated execution result:**
+**Q16. 以下の実行結果を出力するコードがあります。**
 
 ```
 obj = Object.new
@@ -530,11 +530,11 @@ copy = __(1)__
 
 copy.hello
 
-[Execution Result]
+[実行結果]
 Hi!
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `Marshal.load(Marshal.dump(obj))`
 
@@ -546,7 +546,7 @@ Hi!
 
 -----------------------------------------------------------------
 
-**Q17. Assume that the following code must have the stated execution result.**
+**Q17. 以下の実行結果を出力するコードがあります。**
 
 ```
 class ShoppingList
@@ -571,13 +571,13 @@ list.add_item("Eggs")
 
 puts list
 
-[Execution Result]
+[実行結果]
 - Milk
 - Bread
 - Eggs
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `to_s`
 
@@ -589,7 +589,7 @@ puts list
 
 -----------------------------------------------------------------
 
-**Q18. Assume that the following code must have the stated execution result.**
+**Q18. 以下の実行結果を出力するコードがあります。**
 
 ```
 class ShoppingList
@@ -614,12 +614,12 @@ list.add_item("Eggs")
 
 p list
 
-[Execution Result]
+[実行結果]
 ShoppingList:
   @items: ["Milk", "Bread", "Eggs"]
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `to_s`
 
@@ -631,7 +631,7 @@ ShoppingList:
 
 -----------------------------------------------------------------
 
-**Q19. Assume that the following code must have the stated execution result.**
+**Q19. 以下の実行結果を出力するコードがあります。**
 
 ```
 p __(1)__.flat_map {|z|
@@ -644,11 +644,11 @@ p __(1)__.flat_map {|z|
   }
 }.take(3).to_a
 
-[Execution Result]
+[実行結果]
 [[3, 4, 5], [6, 8, 10], [5, 12, 13]]
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `(1..-1).delay`
 
@@ -660,7 +660,7 @@ p __(1)__.flat_map {|z|
 
 -----------------------------------------------------------------
 
-**Q20. Assume that the following code must have the stated execution result.**
+**Q20. 以下の実行結果を出力するコードがあります。**
 
 ```
 ary = ["foo", "bar", nil, "baz"]
@@ -669,11 +669,11 @@ p ary.__(1)__ { |i|
   i&.upcase
 }
 
-[Execution Result]
+[実行結果]
 ["FOO", "BAR", "BAZ"]
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `map`
 
@@ -685,7 +685,7 @@ p ary.__(1)__ { |i|
 
 -----------------------------------------------------------------
 
-**Q21. Given the following code:**
+**Q21. 以下のコードがあります。**
 
 ```
 a, b, *c = ["apple", "banana", "carrot", "daikon"]
@@ -693,7 +693,7 @@ a, b, *c = ["apple", "banana", "carrot", "daikon"]
 p c
 ```
 
-**Which option corresponds to the execution result?**
+**実行結果として正しいものを選択してください。**
 
 *A:* `["apple", "banana", "carrot", "daikon"]`
 
@@ -705,10 +705,10 @@ p c
 
 -----------------------------------------------------------------
 
-**Q22: Which code produces the following execution result? (Choose one.)**
+**Q22: 以下の実行結果を出力するコードを選択してください。(1つ選択)**
 
 ```
-[Execution Result]
+[実行結果]
 [["apple", "banana", "carrot"]]
 ```
 
@@ -746,16 +746,16 @@ fx(["apple", "banana", "carrot"])
 
 -----------------------------------------------------------------
 
-**Q23. Assume that the following code must have the stated execution result.**
+**Q23. 以下の実行結果を出力するコードがあります。**
 
 ```
 p ["foo", "bar", "baz"].map { __(1)__.upcase }
 
-[Execution Result]
+[実行結果]
 ["FOO", "BAR", "BAZ"]
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `_1`
 
@@ -767,7 +767,7 @@ p ["foo", "bar", "baz"].map { __(1)__.upcase }
 
 -----------------------------------------------------------------
 
-**Q24. Given the following code:**
+**Q24. 以下のコードがあります。**
 
 ```
 def fx(a:, b: "apple")
@@ -778,7 +778,7 @@ end
 fx(b: "banana")
 ```
 
-**Which option corresponds to the execution result?**
+**実行結果として正しいものを選択してください。**
 
 *A:*
 ```
@@ -793,14 +793,14 @@ banana
 ```
 
 *C:*
-A syntax error occurs
+文法エラーが発生する
 
 *D:*
-An exception is raised
+例外が発生する
 
 -----------------------------------------------------------------
 
-**Q25. Assume that the following code must have the stated execution result.**
+**Q25. 以下の実行結果を出力するコードがあります。**
 
 ```
 def add(x:, y:, **params)
@@ -811,11 +811,11 @@ end
 
 __(1)__
 
-[Execution Result]
+[実行結果]
 7
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose three.)**
+**__(1)__に入る適切な記述を選択してください。(3つ選択)**
 
 *A:* `p add(x: 2.75, y: 5.25, round: true)`
 
@@ -829,7 +829,7 @@ __(1)__
 
 -----------------------------------------------------------------
 
-**Q26: Assume that the following code must have the stated execution result.**
+**Q26: 以下の実行結果を出力するコードがあります。**
 
 ```
 class Speaker
@@ -846,11 +846,11 @@ end
 
 __(1)__
 
-[Execution Result]
+[実行結果]
 Hello!
 ```
 
-**Which options can be inserted into `__(1)__`? (Choose two.)**
+**__(1)__に入る適切な記述を選択してください。(2つ選択)**
 
 *A:* `puts Speaker.speak`
 
@@ -862,7 +862,7 @@ Hello!
 
 -----------------------------------------------------------------
 
-**Q27. Given the following code:**
+**Q27. 以下のコードがあります。**
 
 ```
 class Speaker
@@ -878,7 +878,7 @@ class << Speaker
 end
 ```
 
-**Which option corresponds to the execution result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:* `"Hello!"`
 
@@ -886,11 +886,11 @@ end
 
 *C:* `nil`
 
-*D:* A syntax error occurs
+*D:* 文法エラーが発生する
 
 -----------------------------------------------------------------
 
-**Q28. Assume that the following code must have the stated execution result.**
+**Q28. 以下の実行結果を出力するコードがあります。**
 
 ```
 def x
@@ -915,13 +915,13 @@ end
 
 puts "done!"
 
-[Execution Result]
+[実行結果]
 x
 y
 done!
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `try`
 
@@ -933,7 +933,7 @@ done!
 
 -----------------------------------------------------------------
 
-**Q29. Assume that the following code must have the stated execution result.**
+**Q29. 以下の実行結果を出力するコードがあります。**
 
 ```
 letters = catch(:done) do
@@ -950,10 +950,10 @@ end
 
 puts letters.join
 
-[Execution Result]
+[実行結果]
 abc
 ```
-**Which option can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `throw [a,b,c]`
 
@@ -965,7 +965,7 @@ abc
 
 -----------------------------------------------------------------
 
-**Q30. Assume that the following code must have the stated execution result.**
+**Q30. 以下の実行結果を出力するコードがあります。**
 
 ```
 begin
@@ -974,11 +974,11 @@ rescue
   puts "OK"
 end
 
-[Execution Result]
+[実行結果]
 OK
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose two.)**
+**__(1)__に入る適切な記述を選択してください。(2つ選択)**
 
 *A:* `raise StandardError`
 
@@ -990,7 +990,7 @@ OK
 
 -----------------------------------------------------------------
 
-**Q31. Given the following code:**
+**Q31. 以下のコードがあります。**
 
 ```
 AnError = Class.new(Exception)
@@ -1008,7 +1008,7 @@ rescue Exception
 end
 ```
 
-**Which option corresponds to the execution result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:*
 ```
@@ -1038,7 +1038,7 @@ Exception rescue
 
 -----------------------------------------------------------------
 
-**Q32. Given the following code:**
+**Q32. 以下のコードがあります。**
 
 ```
 AnError = Class.new(Exception)
@@ -1056,7 +1056,7 @@ rescue AnError
 end
 ```
 
-**Which option corresponds to the execution result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:*
 ```
@@ -1086,7 +1086,7 @@ AnError rescue
 
 -----------------------------------------------------------------
 
-**Q33. Given the following code:**
+**Q33. 以下のコードがあります。**
 
 ```
 begin
@@ -1096,7 +1096,7 @@ rescue => ex
 end
 ```
 
-**Which option corresponds to the execution result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:* `StandardError`
 
@@ -1110,7 +1110,7 @@ end
 
 -----------------------------------------------------------------
 
-**Q34. Given the following code:**
+**Q34. 以下のコードがあります。**
 
 ```
 CustomError = Class.new(StandardError)
@@ -1128,7 +1128,7 @@ rescue => e
 end
 ```
 
-**Which option corresponds to the execution result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:* `CustomError`
 
@@ -1142,7 +1142,7 @@ end
 
 -----------------------------------------------------------------
 
-**Q35. Given the following code:**
+**Q35. 以下のコードがあります。**
 
 ```
 def greeting
@@ -1156,7 +1156,7 @@ end
 puts greeting
 ```
 
-**Which option corresponds to the execution result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:*
 
@@ -1187,7 +1187,7 @@ hi
 
 -----------------------------------------------------------------
 
-**Q36. Given the following code:**
+**Q36. 以下のコードがあります。**
 
 ```
 class Identity
@@ -1210,7 +1210,7 @@ p a == b
 p c == d
 ```
 
-**Which option corresponds to the execution result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:* 
 
@@ -1239,7 +1239,7 @@ false
 
 -----------------------------------------------------------------
 
-**Q37. Given the following code:**
+**Q37. 以下のコードがあります。**
 
 ```
 class Identity
@@ -1256,7 +1256,7 @@ p Identity.this_object.class
 p Identity.new.this_object.class
 ```
 
-**Which option corresponds to the execution result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:*
 ```
@@ -1284,7 +1284,7 @@ Object
 
 -----------------------------------------------------------------
 
-**Q38. Given the following code:**
+**Q38. 以下のコードがあります。**
 
 ```
 module Mixin
@@ -1301,7 +1301,7 @@ end
 p Identity.new.this_object.class
 ```
 
-**Which option corresponds to the execution result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:* `Mixin`
 
@@ -1313,7 +1313,7 @@ p Identity.new.this_object.class
 
 -----------------------------------------------------------------
 
-**Q39: What is the direct superclass of the `Class` class? (choose one.)**
+**Q39: `Class`の直接のスーパークラスを選択してください。(1つ選択)**
 
 *A:* `Object`
 
@@ -1325,7 +1325,7 @@ p Identity.new.this_object.class
 
 -----------------------------------------------------------------
 
-**Q40. Given the following code:**
+**Q40. 以下のコードがあります。**
 
 ```
 module Mixin
@@ -1339,19 +1339,19 @@ class SomeClass
 end
 ```
 
-**Which of the following statements is true? (Choose one.)**
+**以下の記述のうち正しいものを選択してください。(1つ選択)**
 
-*A:* `Mixin.greet` will print `Hello World!`, `SomeClass.greet` will raise an exception.
+*A:* `Mixin.greet`は`Hello World!`を出力し、`SomeClass.greet`は例外を発生する。
 
-*B:* `Mixin.greet` will raise an exception, `SomeClass.greet` will print `Hello World!`.
+*B:* `Mixin.greet`は例外を発生し、`SomeClass.greet`は`Hello World!`を出力する。
 
-*C:* Both `Mixin.greet` and `SomeClass.greet` will print `Hello World!`.
+*C:* `Mixin.greet`も`SomeClass.greet`も`Hello World!`を出力する。
 
-*D:* Both `Mixin.greet` and `SomeClass.greet` will raise an exception.
+*D:* `Mixin.greet`も`SomeClass.greet`も`Hello World!`を例外を発生する。
 
 -----------------------------------------------------------------
 
-**Q41. Assume that the following code must have the stated execution result.**
+**Q41. 以下の実行結果を出力するコードがあります。**
 
 ```
 module Mixin
@@ -1366,11 +1366,11 @@ end
 
 __(1)__
 
-[Execution Result]
+[実行結果]
 Hello World!
 ```
 
-**Which of the following options can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `Mixin.greet`
 
@@ -1382,7 +1382,7 @@ Hello World!
 
 -----------------------------------------------------------------
 
-**Q42. Assume that the following code must have the stated execution result.**
+**Q42. 以下の実行結果を出力するコードがあります。**
 
 ```
 module Mixin
@@ -1397,11 +1397,11 @@ end
 
 __(1)__
 
-[Execution Result]
+[実行結果]
 Hello World!
 ```
 
-**Which of the following options can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `Mixin.greet`
 
@@ -1413,7 +1413,7 @@ Hello World!
 
 -----------------------------------------------------------------
 
-**Q43. Assume that the following code must have the stated execution result.**
+**Q43. 以下の実行結果を出力するコードがあります。**
 
 ```
 class BaseClass
@@ -1431,11 +1431,11 @@ end
 
 ChildClass.new.greet
 
-[Execution Result]
+[実行結果]
 Hello World!
 ```
 
-**Which of the following options CANNOT be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る記述として不適切なものを選択してください。(1つ選択)**
 
 *A:* 
 
@@ -1469,7 +1469,7 @@ end
 
 -----------------------------------------------------------------
 
-**Q44. Assume that the following code must have the stated execution result:**
+**Q44. 以下の実行結果を出力するコードがあります。**
 
 ```
 h = [1, 2, 3]
@@ -1480,11 +1480,11 @@ __(1)__  [x, y, z]
   p [:three, x, y, z]
 end
 
-[Execution Result]
+[実行結果]
 [:three, 1, 2, 3]
 ```
 
-**Which of the following options can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `when`
 
@@ -1496,7 +1496,7 @@ end
 
 -----------------------------------------------------------------
 
-**Q45. Assume that the following code must have the stated execution result:**
+**Q45. 以下の実行結果を出力するコードがあります。**
 
 ```
 class Alphabet
@@ -1518,12 +1518,12 @@ set = Alphabet.new
 p set.take(5)
 p set.select { |e| e > "W" }
 
-[Execution Result]
+[実行結果]
 ["A", "B", "C", "D", "E"]
 ["X", "Y", "Z"]
 ```
 
-**Which of the following options can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `all`
 
@@ -1537,7 +1537,7 @@ p set.select { |e| e > "W" }
 
 -----------------------------------------------------------------
 
-**Q46. Given the following code:**
+**Q46. 以下のコードがあります。**
 
 ```
 class TShirt
@@ -1565,7 +1565,7 @@ p medium <= large
 p medium >  large
 p medium >= large
 ```
-**Which option corresponds to the execution result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:*
 
@@ -1605,11 +1605,11 @@ false
 ```
 
 *E:*
-An exception is raised.
+例外が発生する
 
 -----------------------------------------------------------------
 
-**Q47. Given the following code:**
+**Q47. 以下のコードがあります。**
 
 ```
 require "date"
@@ -1620,7 +1620,7 @@ puts(date << 12)
 puts(date >> 12)
 ```
 
-**Which option corresponds to the execution result? (Choose one.)**
+**実行結果として正しいものを選択してください。(1つ選択)**
 
 *A:*
 ```
@@ -1648,7 +1648,7 @@ puts(date >> 12)
 
 -----------------------------------------------------------------
 
-**Q48. Assume that the following code must have the stated execution result:**
+**Q48. 以下の実行結果を出力するコードがあります。**
 
 ```
 require "time"
@@ -1656,11 +1656,11 @@ require "time"
 t = Time.__(1)__("00000024021993", "%S%M%H%d%m%Y")
 puts t.iso8601
 
-[Execution Result]
+[実行結果]
 1993-02-24T00:00:00+09:00
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `format`
 
@@ -1672,7 +1672,7 @@ puts t.iso8601
 
 -----------------------------------------------------------------
 
-**Q49. Assume that the following code must have the stated execution result:**
+**Q49. 以下の実行結果を出力するコードがあります。**
 
 ```
 require "singleton"
@@ -1685,11 +1685,11 @@ x = Foo.instance
 y = Foo.instance
 p x.equal?(y)
 
-[Execution Result]
+[実行結果]
 true
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `include Singleton`
 
@@ -1701,7 +1701,7 @@ true
 
 -----------------------------------------------------------------
 
-**Q50. Assume that the following code must have the stated execution result:**
+**Q50. 以下の実行結果を出力するコードがあります。**
 
 ```
 require 'forwardable'
@@ -1723,11 +1723,11 @@ list.push("b")
 list.push("c")
 p list[1]
 
-[Execution Result]
+[実行結果]
 "b"
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose one.)**
+**__(1)__に入る適切な記述を選択してください。(1つ選択)**
 
 *A:* `forward`
 
