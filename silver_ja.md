@@ -66,7 +66,7 @@ puts num
 
 **Q6. 以下のコードがあります。**
 
-```
+```ruby
 x = "Hello"
 y = x.empty? ? 1 : 2
 p y
@@ -83,7 +83,7 @@ p y
 
 **Q7. 以下のコードがあります。**
 
-```
+```ruby
 amount = 120
 
 size = case amount
@@ -107,7 +107,7 @@ p size
 
 **Q8. 以下のコードがあります。**
 
-```
+```ruby
 item = "apple"
 
 ["banana", "carrot", "daikon"].each do |item|
@@ -126,7 +126,8 @@ puts item
 例外が発生する
 
 *(c)*
-```
+
+```ruby
 banana
 carrot
 daikon
@@ -134,7 +135,8 @@ daikon
 ```
 
 *(d)*
-```
+
+```ruby
 banana
 carrot
 daikon
@@ -145,7 +147,7 @@ apple
 
 **Q9. 以下のコードがあります。**
 
-```
+```ruby
 x = 0
 
 4.times do |i|
@@ -167,7 +169,7 @@ p x
 
 **Q10. 以下のコードがあります。**
 
-```
+```ruby
 s = "abcde"
 p s.each_char.map { |i|
   i * 2
@@ -186,7 +188,7 @@ p s.each_char.map { |i|
 
 **Q11. 以下のコードがあります。**
 
-```
+```ruby
 p "cocoa".chars.tally
 ```
 
@@ -218,7 +220,7 @@ yay yay yay
 
 **Q13. 以下のコードがあります。**
 
-```
+```ruby
 s = "pear"
 
 if s.empty?
@@ -241,7 +243,7 @@ end
 
 **Q14: 以下のコードがあります。**
 
-```
+```ruby
 ["foo: abc", "bar: 100"].each do |i|
   p i.slice(/[0-9]+/)&.to_i
 end
@@ -250,19 +252,22 @@ end
 **実行結果として正しいものを選択してください。(1つ選択)**
 
 *(a)*
-```
+
+```ruby
 0
 100
 ```
 
 *(b)*
-```
+
+```ruby
 nil
 100
 ```
 
 *(c)*
-```
+
+```ruby
 false
 100
 ```
@@ -277,7 +282,7 @@ false
 
 **Q15: 以下のコードがあります。**
 
-```
+```ruby
 def foo(x: 1, y: 2, z: 3)
   p [x, y, z]
 end
@@ -326,7 +331,7 @@ __(1)__
 
 **Q18.以下のコードがあります。**
 
-```
+```ruby
 MSG = 42
 MSG += 5
 p MSG
@@ -343,7 +348,7 @@ p MSG
 
 **Q19. 以下のコードがあります。**
 
-```
+```ruby
 MSG = "hello"
 MSG.upcase!
 p MSG
@@ -370,7 +375,7 @@ p MSG
 
 **Q21. 以下のコードがあります。**
 
-```
+```ruby
 x = [1,2,3,4,5,6,7,8]
 y = x
 x.reject! { |e| e.even? }
@@ -382,25 +387,29 @@ p y
 
 
 *(a)*
-```
+
+```ruby
 [1, 3, 5, 7]
 [1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
 *(b)*
-```
+
+```ruby
 [1, 2, 3, 4, 5, 6, 7, 8]
 [1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
 *(c)*
-```
+
+```ruby
 [1, 3, 5, 7]
 [1, 3, 5, 7]
 ```
 
 *(d)*
-```
+
+```ruby
 [1, 3, 5, 7]
 [2, 4, 6, 8]
 ```
@@ -409,7 +418,7 @@ p y
 
 **Q22. 以下のコードがあります。**
 
-```
+```ruby
 a = [ 2, 4, 6, 8, 10 ]
 a.shift
 a.pop
@@ -448,7 +457,7 @@ succeeded!
 
 **Q24. 以下のコードがあります。**
 
-```
+```ruby
 m = true
 m or n = true
 p n
@@ -503,7 +512,7 @@ p ary.__(1)__ { |i| i.odd? }
 
 **Q27. 以下のコードがあります。**
 
-```
+```ruby
 puts "42A7".to_i
 ```
 
@@ -518,7 +527,7 @@ puts "42A7".to_i
 
 **Q28. 次のメソッドのうち`:c`がハッシュのキーとして存在するかどうかを「返さない」ものを選択してください。(1つ選択)**
 
-```
+```ruby
 h = {a: 2, b: 4, c: 6, d: 8, e: 10}
 ```
 
@@ -571,7 +580,7 @@ p ["apple", "banana"] __(1)__ ["banana", "carrot"]
 
 **Q31. 以下のコードがあります。**
 
-```
+```ruby
 p %i(x1 x2 x3)
 ```
 
@@ -586,7 +595,7 @@ p %i(x1 x2 x3)
 
 **Q32. 以下のコードがあります。**
 
-```
+```ruby
 class SomeError < StandardError; end
 class SomeOtherError < SomeError; end
 
@@ -614,7 +623,7 @@ end
 
 **Q33. 以下のコードがあります。**
 
-```
+```ruby
 begin
   ans = 100/0
   puts ans
@@ -629,7 +638,8 @@ end
 **実行結果として正しいものを選択してください。(1つ選択)**
 
 *(a)*
-```
+
+```ruby
 0
 DONE!
 ```
@@ -641,13 +651,15 @@ Error: ZeroDivisionError
 ```
 
 *(c)*
-```
+
+```ruby
 Error: ZeroDivisionError
 DONE!
 ```
 
 *(d)*
-```
+
+```ruby
 Error: ZeroDivisionError
 0
 ```
@@ -668,7 +680,7 @@ Error: ZeroDivisionError
 
 **Q35. 以下のコードがあります。**
 
-```
+```ruby
 class Object
   def moo
     puts "MOO!"
@@ -745,7 +757,7 @@ HELLO, WORLD!
 
 **Q38. 以下のコードがあります。**
 
-```
+```ruby
 class Foo
   attr_reader :var
   def initialize
@@ -811,7 +823,7 @@ p r.__(1)__
 
 **Q41. 以下のコードがあります。**
 
-```
+```ruby
 p [0,1,2,3,4,5].find {|x| x < 3}
 ```
 
@@ -862,7 +874,7 @@ p ary.__(1)__
 
 **Q44. 以下のコードがあります。**
 
-```
+```ruby
 File.write("test", "hellorubyworld\n")
 File.open("test") do |file|
   file.seek(5)
@@ -882,7 +894,7 @@ end
 
 **Q45. 以下のコードではopenメソッドの第2引数を省略してファイルを開いています。このケースで暗黙的に第2引数として指定されるものを選択してください。**
 
-```
+```ruby
 file = open("sample.txt")
 ```
 
@@ -928,7 +940,7 @@ open("test_one.txt") {|source|
 
 **Q48. 以下のコードがあります。**
 
-```
+```ruby
 p "hello ruby world"[6,4]
 ```
 
@@ -962,7 +974,7 @@ p str
 
 **Q50. 以下のコードがあります。**
 
-```
+```ruby
 puts 5 * "hi"
 ```
 

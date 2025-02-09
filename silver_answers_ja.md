@@ -247,7 +247,7 @@ Another approach is to use a range, which generates a subarray based the index v
 
 ---------------------------------------------------------------------------
 
-**A28. (b)**
+**A28: (b)**
 
 `has_key?`、`include?`、`key?`、`member?`はすべて同じメソッドの別名で、与えられたキーがハッシュに存在する場合`true`を、存在しない場合`false`を返します。
 

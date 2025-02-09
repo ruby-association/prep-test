@@ -4,7 +4,7 @@
 
 **Q1. Assume that the following code must have the stated execution result:** 
 
-```
+```ruby
 class Stack
   def initialize
     @contents = []
@@ -25,7 +25,8 @@ p stack.pop
 **Which option can be inserted into `__(1)__`? (Choose two.)**
 
 *A:*
-```
+
+```ruby
 [:push, :pop].each do |name|
   define_method(name) do |*args|
     @contents.send(name, *args)
@@ -34,7 +35,8 @@ end
 ```
 
 *B:*
-```
+
+```ruby
 for name in [:push, :pop]
   define_method(name) do |*args|
     @contents.send(name, *args)
@@ -43,7 +45,8 @@ end
 ```
 
 *C:*
-```
+
+```ruby
 [:push, :pop].each do |name|
   instance_eval(<<-EOF)
     def #{name}(*args)
@@ -54,7 +57,8 @@ end
 ```
 
 *D:*
-```
+
+```ruby
 [:push, :pop].each do |name|
   class_eval(<<-EOF)
     def #{name}(*args)
@@ -68,7 +72,7 @@ end
 
 **Q2. Given the following code:**
 
-```
+```ruby
 module I
 end
 
@@ -97,7 +101,7 @@ p C.ancestors
 
 **Q3. Assume that the following code must have the stated execution result:** 
 
-```
+```ruby
 x = __(1)__
 p x + 1
 
@@ -119,7 +123,7 @@ p x + 1
 
 **Q4. Assume that the following code must have the stated execution result:** 
 
-```
+```ruby
 p ("aaaaaa".."zzzzzz").lazy.select { |e| e.end_with?("f") }.__(1)__
 
 [Execution Result]
@@ -140,7 +144,7 @@ p ("aaaaaa".."zzzzzz").lazy.select { |e| e.end_with?("f") }.__(1)__
 
 **Q5. Assume that the following code must have the stated execution result:** 
 
-```
+```ruby
 def round(n, __(1)__)
   n.round(__(1)__)
 end
@@ -165,7 +169,7 @@ p round(2.5, half: :even)
 
 **Q6. Given the following code:**
 
-```
+```ruby
 class A
   def foo
     self.bar
@@ -207,7 +211,7 @@ An exception is raised
 
 **Q7. Assume that the following code must have the stated execution result.** 
 
-```
+```ruby
 class Greeter
   class << self
     def hello
@@ -236,7 +240,7 @@ Hello there!
 
 **Q8: Assume that the following code must have the stated execution result.**
 
-```
+```ruby
 __(1)__
 
 p multiply_by(4) { 2 + 3 }
@@ -249,7 +253,7 @@ p multiply_by(4) { 2 + 3 }
 
 *A:*
 
-```
+```ruby
 def multiply_by(n, &block)
   n * block.call
 end
@@ -257,7 +261,7 @@ end
 
 *B:*
 
-```
+```ruby
 def multiply_by(n, &block)
   n * block
 end
@@ -265,7 +269,7 @@ end
 
 *C:*
 
-```
+```ruby
 def multiply_by(n)
   n * yield
 end
@@ -273,7 +277,7 @@ end
 
 *D:*
 
-```
+```ruby
 def multiply_by(n)
   n * yield.call
 end
@@ -283,7 +287,7 @@ end
 
 **Q9: Assume that the following code must have the stated execution result.** 
 
-```
+```ruby
 __(1)__
 
 p sum { |e| e << 1 << 5 << 7 }
@@ -296,7 +300,7 @@ p sum { |e| e << 1 << 5 << 7 }
 
 *A:*
 
-```
+```ruby
 def sum(&block)
   array = []
   
@@ -307,7 +311,8 @@ end
 ```
 
 *B:*
-```
+
+```ruby
 def sum(&block)
   array = []
   
@@ -318,7 +323,8 @@ end
 ```
 
 *C:*
-```
+
+```ruby
 def sum
   array = []
   
@@ -329,7 +335,8 @@ end
 ```
 
 *D:*
-```
+
+```ruby
 def sum
   array = []
   
@@ -343,7 +350,7 @@ end
 
 **Q10. Given the following code:** 
 
-```
+```ruby
 class A
   @@x = 1
 end
@@ -378,7 +385,7 @@ p B.x
 
 **Q11. Assume that the following code must have the stated execution result:**
 
-```
+```ruby
 words = ["apple", "banana", "cabbage"]
 pop = Proc.new { words.pop }
 3.times{ puts __(1)__ }
@@ -405,7 +412,7 @@ apple
 
 **Q12. Assume that the following code must have the stated execution result:**
 
-```
+```ruby
 words = ["apple", "banana", "cabbage"]
 pop = __(1)__{ words.pop }
 3.times{ puts pop.call }
@@ -430,7 +437,7 @@ apple
 
 **Q13. Assume that the following code must have the stated execution result.**
 
-```
+```ruby
 add = __(1)__
 puts add.call("hello")
 
@@ -452,7 +459,7 @@ HELLO
 
 **Q14. Assume that the following code must have the stated execution result:**
 
-```
+```ruby
 __(1)__
   x + y
 end
@@ -477,7 +484,7 @@ p add(1, 2)
 
 **Q15. Given the following code:**
 
-```
+```ruby
 def reader_method(s)
   <<~EOF
     def #{s}
@@ -492,21 +499,24 @@ print reader_method("foo")
 **Which option corresponds to the execution result? (Choose one.)**
 
 *A:*
-```
+
+```ruby
     def foo
       @foo
     end
 ```
 
 *B:*
-```
+
+```ruby
   def foo
     @foo
   end
 ```
 
 *C:*
-```
+
+```ruby
 def foo
   @foo
 end
@@ -519,7 +529,7 @@ A syntax error occurs.
 
 **Q16. Assume that the following code must have the stated execution result:**
 
-```
+```ruby
 obj = Object.new
 
 def obj.hello
@@ -548,7 +558,7 @@ Hi!
 
 **Q17. Assume that the following code must have the stated execution result.**
 
-```
+```ruby
 class ShoppingList
   def initialize
     @items = []
@@ -591,7 +601,7 @@ puts list
 
 **Q18. Assume that the following code must have the stated execution result.**
 
-```
+```ruby
 class ShoppingList
   def initialize
     @items = []
@@ -633,7 +643,7 @@ ShoppingList:
 
 **Q19. Assume that the following code must have the stated execution result.**
 
-```
+```ruby
 p __(1)__.flat_map {|z|
   (1..z).flat_map {|x|
     (x..z).select {|y|
@@ -662,7 +672,7 @@ p __(1)__.flat_map {|z|
 
 **Q20. Assume that the following code must have the stated execution result.**
 
-```
+```ruby
 ary = ["foo", "bar", nil, "baz"]
 
 p ary.__(1)__ { |i|
@@ -687,7 +697,7 @@ p ary.__(1)__ { |i|
 
 **Q21. Given the following code:**
 
-```
+```ruby
 a, b, *c = ["apple", "banana", "carrot", "daikon"]
 
 p c
@@ -707,13 +717,14 @@ p c
 
 **Q22: Which code produces the following execution result? (Choose one.)**
 
-```
+```ruby
 [Execution Result]
 [["apple", "banana", "carrot"]]
 ```
 
 *A:*
-```
+
+```ruby
 def fx(*args)
   p(args)
 end
@@ -721,7 +732,8 @@ fx(*["apple", "banana", "carrot"])
 ```
 
 *B:*
-```
+
+```ruby
 def fx(*args)
   p(args)
 end
@@ -729,7 +741,8 @@ fx(["apple", "banana", "carrot"])
 ```
 
 *C:*
-```
+
+```ruby
 def fx(*args)
   p(args)
 end
@@ -737,7 +750,8 @@ fx("apple", "banana", "carrot")
 ```
 
 *D:*
-```
+
+```ruby
 def fx(*args)
   p(*args)
 end
@@ -748,7 +762,7 @@ fx(["apple", "banana", "carrot"])
 
 **Q23. Assume that the following code must have the stated execution result.**
 
-```
+```ruby
 p ["foo", "bar", "baz"].map { __(1)__.upcase }
 
 [Execution Result]
@@ -769,7 +783,7 @@ p ["foo", "bar", "baz"].map { __(1)__.upcase }
 
 **Q24. Given the following code:**
 
-```
+```ruby
 def fx(a:, b: "apple")
   p a
   p b
@@ -781,13 +795,15 @@ fx(b: "banana")
 **Which option corresponds to the execution result?**
 
 *A:*
-```
+
+```ruby
 nil
 apple
 ```
 
 *B:*
-```
+
+```ruby
 nil
 banana
 ```
@@ -802,7 +818,7 @@ An exception is raised
 
 **Q25. Assume that the following code must have the stated execution result.**
 
-```
+```ruby
 def add(x:, y:, **params)
   z = x + y
 
@@ -831,7 +847,7 @@ __(1)__
 
 **Q26: Assume that the following code must have the stated execution result.**
 
-```
+```ruby
 class Speaker
   @message = "Hello!"
 
@@ -864,7 +880,7 @@ Hello!
 
 **Q27. Given the following code:**
 
-```
+```ruby
 class Speaker
   @message = "Hello!"
 
@@ -892,7 +908,7 @@ end
 
 **Q28. Assume that the following code must have the stated execution result.**
 
-```
+```ruby
 def x
   puts "x"
 end
@@ -935,7 +951,7 @@ done!
 
 **Q29. Assume that the following code must have the stated execution result.**
 
-```
+```ruby
 letters = catch(:done) do
   ("a".."z").each do |a|
     ("a".."z").each do |b|
@@ -967,7 +983,7 @@ abc
 
 **Q30. Assume that the following code must have the stated execution result.**
 
-```
+```ruby
 begin
   __(1)__
 rescue
@@ -992,7 +1008,7 @@ OK
 
 **Q31. Given the following code:**
 
-```
+```ruby
 AnError = Class.new(Exception)
 
 begin
@@ -1011,27 +1027,32 @@ end
 **Which option corresponds to the execution result? (Choose one.)**
 
 *A:*
-```
+
+```ruby
 Bare rescue
 ```
 
 *B:* 
-```
+
+```ruby
 StandardError rescue
 ```
 
 *C:* 
-```
+
+```ruby
 AnError rescue
 ```
 
 *D:* 
-```
+
+```ruby
 Exception rescue
 ```
 
 *E:*
-```
+
+```ruby
 AnError rescue
 Exception rescue
 ```
@@ -1040,7 +1061,7 @@ Exception rescue
 
 **Q32. Given the following code:**
 
-```
+```ruby
 AnError = Class.new(Exception)
 
 begin
@@ -1059,27 +1080,32 @@ end
 **Which option corresponds to the execution result? (Choose one.)**
 
 *A:*
-```
+
+```ruby
 Bare rescue
 ```
 
 *B:* 
-```
+
+```ruby
 StandardError rescue
 ```
 
 *C:* 
-```
+
+```ruby
 AnError rescue
 ```
 
 *D:* 
-```
+
+```ruby
 Exception rescue
 ```
 
 *E:*
-```
+
+```ruby
 Exception rescue
 AnError rescue
 ```
@@ -1088,7 +1114,7 @@ AnError rescue
 
 **Q33. Given the following code:**
 
-```
+```ruby
 begin
   "hello".world
 rescue => ex
@@ -1112,7 +1138,7 @@ end
 
 **Q34. Given the following code:**
 
-```
+```ruby
 CustomError = Class.new(StandardError)
 
 def boom
@@ -1144,7 +1170,7 @@ end
 
 **Q35. Given the following code:**
 
-```
+```ruby
 def greeting
   "hello"
 ensure
@@ -1160,27 +1186,27 @@ puts greeting
 
 *A:*
 
-```
+```ruby
 hello
 ```
 
 *B:*
 
-```
+```ruby
 hi
 ```
 
 
 *C:*
 
-```
+```ruby
 Ensure called!
 hello
 ```
 
 *D:*
 
-```
+```ruby
 Ensure called!
 hi
 ```
@@ -1189,7 +1215,7 @@ hi
 
 **Q36. Given the following code:**
 
-```
+```ruby
 class Identity
   def self.this_object
     self
@@ -1214,25 +1240,28 @@ p c == d
 
 *A:* 
 
-```
+```ruby
 true
 true
 ```
 
 *B:*
-```
+
+```ruby
 true
 false
 ```
 
 *C:*
-```
+
+```ruby
 false
 true
 ```
 
 *D:*
-```
+
+```ruby
 false
 false
 ```
@@ -1241,7 +1270,7 @@ false
 
 **Q37. Given the following code:**
 
-```
+```ruby
 class Identity
   def self.this_object
     self.class
@@ -1259,25 +1288,29 @@ p Identity.new.this_object.class
 **Which option corresponds to the execution result? (Choose one.)**
 
 *A:*
-```
+
+```ruby
 Identity
 Identity
 ```
 
 *B:*
-```
+
+```ruby
 Class
 Identity
 ```
 
 *C:*
-```
+
+```ruby
 Object
 Identity
 ```
 
 *D:*
-```
+
+```ruby
 Class
 Object
 ```
@@ -1286,7 +1319,7 @@ Object
 
 **Q38. Given the following code:**
 
-```
+```ruby
 module Mixin
   def this_object
     self
@@ -1327,7 +1360,7 @@ p Identity.new.this_object.class
 
 **Q40. Given the following code:**
 
-```
+```ruby
 module Mixin
   def self.greet
     puts "Hello World!"
@@ -1353,7 +1386,7 @@ end
 
 **Q41. Assume that the following code must have the stated execution result.**
 
-```
+```ruby
 module Mixin
   def greet
     puts "Hello World!"
@@ -1384,7 +1417,7 @@ Hello World!
 
 **Q42. Assume that the following code must have the stated execution result.**
 
-```
+```ruby
 module Mixin
   def greet
     puts "Hello World!"
@@ -1415,7 +1448,7 @@ Hello World!
 
 **Q43. Assume that the following code must have the stated execution result.**
 
-```
+```ruby
 class BaseClass
   private
 
@@ -1439,19 +1472,19 @@ Hello World!
 
 *A:* 
 
-```
+```ruby
 public :greet
 ```
 
 *B:*
 
-```
+```ruby
 protected :greet
 ```
 
 *C:*
 
-```
+```ruby
 def greet
   super
 end
@@ -1459,7 +1492,7 @@ end
 
 *D:*
 
-```
+```ruby
 alias_method :original_greet, :greet
 
 def greet
@@ -1471,7 +1504,7 @@ end
 
 **Q44. Assume that the following code must have the stated execution result:**
 
-```
+```ruby
 h = [1, 2, 3]
 case h
 __(1)__ [x, y]
@@ -1498,7 +1531,7 @@ end
 
 **Q45. Assume that the following code must have the stated execution result:**
 
-```
+```ruby
 class Alphabet
   include Enumerable
 
@@ -1539,7 +1572,7 @@ p set.select { |e| e > "W" }
 
 **Q46. Given the following code:**
 
-```
+```ruby
 class TShirt
   SIZES = [:xs, :s, :m, :l, :xl, :xxl]
 
@@ -1569,7 +1602,7 @@ p medium >= large
 
 *A:*
 
-```
+```ruby
 true
 false
 true
@@ -1578,7 +1611,7 @@ true
 ```
 
 *B:*
-```
+```ruby
 false
 true
 true
@@ -1587,7 +1620,7 @@ false
 ```
 
 *C:*
-```
+```ruby
 false
 false
 false
@@ -1596,7 +1629,7 @@ true
 ```
 
 *D:*
-```
+```ruby
 false
 false
 false
@@ -1611,7 +1644,7 @@ An exception is raised.
 
 **Q47. Given the following code:**
 
-```
+```ruby
 require "date"
 
 date = Date.new(2000, 2, 24)
@@ -1623,25 +1656,25 @@ puts(date >> 12)
 **Which option corresponds to the execution result? (Choose one.)**
 
 *A:*
-```
+```ruby
 2000-02-12
 2000-03-07
 ```
 
 *B:*
-```
+```ruby
 2000-03-07
 2000-02-12
 ```
 
 *C:*
-```
+```ruby
 1999-02-24
 2001-02-24
 ```
 
 *D:*
-```
+```ruby
 1988-02-24
 2012-02-24
 ```
@@ -1650,7 +1683,7 @@ puts(date >> 12)
 
 **Q48. Assume that the following code must have the stated execution result:**
 
-```
+```ruby
 require "time"
 
 t = Time.__(1)__("00000024021993", "%S%M%H%d%m%Y")
@@ -1674,7 +1707,7 @@ puts t.iso8601
 
 **Q49. Assume that the following code must have the stated execution result:**
 
-```
+```ruby
 require "singleton"
 
 class Foo
@@ -1703,7 +1736,7 @@ true
 
 **Q50. Assume that the following code must have the stated execution result:**
 
-```
+```ruby
 require 'forwardable'
 
 class List
