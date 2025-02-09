@@ -151,7 +151,7 @@ p round(2.5, half: :even)
 2
 ```
 
-**Which option can be inserted into `__(1)__`? (Choose two.)**
+**Which option can be inserted into `__(1)__`? (Choose one.)**
 
 *A:* `*`
 
