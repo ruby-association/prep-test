@@ -212,7 +212,6 @@ Rubyの変数名についてのルールは以下のとおりです。
 
 一つのアプローチは二つの整数を使用する方法、つまり`x[1,3]`のような書き方で、これはインデックス`1`からはじまる長さ`3`の部分配列を意味します。
 
-Another approach is to use a range, which generates a subarray based the index values within that range.
 もう一つのアプローチはRangeオブジェクトを使用する方法で、指定された範囲に含まれるインデックスの値にもとづいた部分配列を生成します。
 
 範囲を使うシンプルな形式は`x[1..3]`のようなもので、インデックス`1`ではじまり`3`で終わる部分配列を返します。
@@ -397,8 +396,6 @@ Rubyの数値クラスの`<=>`の動作は、この挙動を自動的に提供�
 
 **A44: (b)**
 
-The `seek` method is used to move to a specific byte offset in an I/O stream.
-Offsets are zero-based, so `seek(5)` sets the position in the stream to just *after* the fifth byte.
 `seek`メソッドはI/Oストリームの特定のバイトオフセットに移動するために使用されます。
 オフセットは0ベースで、`seek(5)`は5バイト目の直後の位置にセットします。
 
