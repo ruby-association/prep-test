@@ -95,12 +95,12 @@ end
 p size
 ```
 
+**Which is the correct output? (Choose one.)**
+
 - (a) `"S"`
 - (b) `"M"`
 - (c) `"L"`
 - (d) `"XL"`
-
-**Which is the correct output? (Choose one.)**
 
 ---------------------------------------------------------------------------
 
@@ -414,12 +414,12 @@ a.push(12)
 p a
 ```
 
+**Which is the correct output? (Choose one.)**
+
 - (a) `[2, 4, 6, 8, 10, 12]`
 - (b) `[2, 4, 6, 8, 10]`
 - (c) `[4, 6, 8, 12]`
 - (d) `[4, 6, 8]`
-
-**Which is the correct output? (Choose one.)**
 
 ---------------------------------------------------------------------------
 
